@@ -7,11 +7,11 @@
   <style>
     body {
       font-family: sans-serif;
+      background: #f5f7fa;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background: #f5f7fa;
       margin: 0;
     }
 
@@ -49,56 +49,33 @@
 <body>
   <div class="container">
     <h1>Welcome to iMediate</h1>
-    <div id="content">
-      <button id="login">Log In</button>
-      <button id="logout" style="display: none;">Log Out</button>
-      <div id="user" class="user-info" style="display: none;"></div>
-    </div>
+    <button id="login">Log In</button>
+    <button id="logout" style="display:none;">Log Out</button>
+    <div id="user" class="user-info" style="display: none;"></div>
   </div>
 
   <script>
     let auth0 = null;
 
-    const auth0Config = {
-      domain: "imediate.eu.auth0.com",
-      clientId: "EYbH3i9xd4SbycAYZWiR5dgh9HKAiXa5",
-      authorizationParams: {
-        redirect_uri: window.location.origin
+    async function initAuth0() {
+      auth0 = await createAuth0Client({
+        domain: "imediate.eu.auth0.com",
+        clientId: "EYbH3i9xd4SbycAYZWiR5dgh9HKAiXa5",
+        authorizationParams: {
+          redirect_uri: "https://imediate-app.github.io/website/"
+        }
+      });
+
+      // Handle login redirect
+      if (window.location.search.includes("code=") && window.location.search.includes("state=")) {
+        try {
+          await auth0.handleRedirectCallback();
+          window.history.replaceState({}, document.title, "/website/");
+        } catch (e) {
+          console.error("Error handling redirect:", e);
+        }
       }
-    };
 
-    async function configureClient() {
-      auth0 = await createAuth0Client(auth0Config);
-    }
-
-    async function updateUI() {
       const isAuthenticated = await auth0.isAuthenticated();
 
-      document.getElementById("login").style.display = isAuthenticated ? "none" : "block";
-      document.getElementById("logout").style.display = isAuthenticated ? "block" : "none";
-
-      if (isAuthenticated) {
-        const user = await auth0.getUser();
-        document.getElementById("user").style.display = "block";
-        document.getElementById("user").innerText = `Hello, ${user.name}`;
-      } else {
-        document.getElementById("user").style.display = "none";
-      }
-    }
-
-    window.onload = async () => {
-      await configureClient();
-
-      if (window.location.search.includes("code=") && window.location.search.includes("state=")) {
-        await auth0.handleRedirectCallback();
-        window.history.replaceState({}, document.title, "/website/");
-      }
-
-      updateUI();
-
-      document.getElementById("login").addEventListener("click", () => auth0.loginWithRedirect());
-      document.getElementById("logout").addEventListener("click", () => auth0.logout({ returnTo: window.location.origin }));
-    };
-  </script>
-</body>
-</html>
+      document.getElementById("login").style.display = isAuthenticated ? "none" : "
