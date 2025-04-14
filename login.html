@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>iMediate Login V2</title>
+  <title>iMediate Login 3</title>
   <style>
     body {
       font-family: sans-serif;
@@ -44,21 +44,21 @@
       color: #333;
     }
   </style>
-  <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
+  <!-- ✅ Load Auth0 SDK with defer -->
+  <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js" defer></script>
 </head>
 <body>
   <div class="container">
-    <h1>Welcome to iMediate</h1>
+    <h1>Welcome to iMediate 3</h1>
     <button id="login">Log In</button>
     <button id="logout" style="display:none;">Log Out</button>
     <div id="user" class="user-info" style="display: none;"></div>
   </div>
 
+  <!-- ✅ Our logic runs only after everything is loaded -->
   <script>
-    let auth0 = null;
-
-    async function initAuth0() {
-      auth0 = await createAuth0Client({
+    window.addEventListener('DOMContentLoaded', async () => {
+      const auth0 = await createAuth0Client({
         domain: "imediate.eu.auth0.com",
         clientId: "EYbH3i9xd4SbycAYZWiR5dgh9HKAiXa5",
         authorizationParams: {
@@ -66,13 +66,13 @@
         }
       });
 
-      // Handle login redirect
+      // Handle Auth0 login redirect
       if (window.location.search.includes("code=") && window.location.search.includes("state=")) {
         try {
           await auth0.handleRedirectCallback();
           window.history.replaceState({}, document.title, "/website/");
-        } catch (e) {
-          console.error("Error handling redirect:", e);
+        } catch (err) {
+          console.error("Redirect error", err);
         }
       }
 
@@ -86,21 +86,15 @@
         document.getElementById("user").style.display = "block";
         document.getElementById("user").textContent = `Hello, ${user.name}`;
       }
-    }
-
-    window.onload = async () => {
-      await initAuth0();
 
       document.getElementById("login").addEventListener("click", () => {
         auth0.loginWithRedirect();
       });
 
       document.getElementById("logout").addEventListener("click", () => {
-        auth0.logout({
-          returnTo: "https://imediate-app.github.io/website/"
-        });
+        auth0.logout({ returnTo: "https://imediate-app.github.io/website/" });
       });
-    };
+    });
   </script>
 </body>
 </html>
