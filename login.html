@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>iMediate Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #user-info {
+      margin-top: 20px;
+    }
+    img {
+      border-radius: 50%;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to iMediate</h1>
+  <div id="buttons">
+    <button id="login">Log In</button>
+    <button id="logout" style="display:none;">Log Out</button>
+  </div>
+  <div id="user-info" style="display:none;">
+    <h2>Welcome, <span id="username"></span>!</h2>
+    <img id="profile-pic" width="100" height="100" />
+  </div>
+
+  <script src="https://cdn.auth0.com/js/auth0-spa-js/1.19/auth0-spa-js.production.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+      const auth0 = await createAuth0Client({
+        domain: "imediate.eu.auth0.com",
+        client_id: "EYbH3i9xd4SbycAYZWiR5dgh9HKAiXa5",
+        cacheLocation: "localstorage",
+        useRefreshTokens: true
+      });
+
+      const loginButton = document.getElementById("login");
+      const logoutButton = document.getElementById("logout");
+      const userInfo = document.getElementById("user-info");
+
+      // Handle login
+      loginButton.addEventListener("click", async () => {
+        await auth0.loginWithRedirect({
+          redirect_uri: "https://imediate-app.github.io/website/"
+        });
+      });
+
+      // Handle logout
+      logoutButton.addEventListener("click", () => {
+        auth0.logout({
+          logoutParams: {
+            returnTo: "https://imediate-app.github.io/website/"
+          }
+        });
+      });
+
+      // Handle redirect from Auth0
+      if (window.location.search.includes("code=")

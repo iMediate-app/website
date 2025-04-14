@@ -44,8 +44,8 @@ body {
 /*header section*/
 .hero_area {
   height: calc(100vh - 30px);
-  background: -webkit-gradient(linear, left top, right top, color-stop(55%, #1a2e35), color-stop(55%, #1cbbb4));
-  background: linear-gradient(to right, #1a2e35 55%, #1cbbb4 55%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(55%, whitesmoke), color-stop(55%, #c1e4c4));
+  background: linear-gradient(to right, whitesmoke 55%, #c1e4c4 55%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,7 +59,7 @@ body {
 .sub_page .hero_area {
   height: auto;
   background: none;
-  background-color: #1a2e35;
+  background-color: #c1e4c4;
 }
 
 .hero_area.sub_pages {
@@ -92,7 +92,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: #ffffff;
+  color: #050505;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -106,7 +106,7 @@ body {
 
 .custom_nav-container.navbar-expand-lg .navbar-nav .nav-item .nav-link {
   padding: 10px 15px;
-  color: #ffffff;
+  color: #050505;
   text-align: center;
 }
 
@@ -118,7 +118,7 @@ a:focus {
 
 a:hover,
 a:focus {
-  color: initial;
+  color: #050505;
 }
 
 .btn,
@@ -137,6 +137,7 @@ a:focus {
   height: 35px;
   padding: 0;
   border: none;
+  color: #050505;
 }
 
 .custom_nav-container form {
@@ -154,13 +155,14 @@ a:focus {
 }
 
 .navbar-brand img {
-  width: 35px;
+  width: 10em;
   margin-right: 5px;
+  margin-top: 5px;
 }
 
 .navbar-brand span {
   font-weight: bold;
-  color: #ffffff;
+  color: #050505;
   font-size: 24px;
 }
 
@@ -229,13 +231,13 @@ a:focus {
 }
 
 .slider_section .detail-box h1 {
-  color: #ffffff;
+  color: #050505;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 .slider_section .detail-box p {
-  color: #ffffff;
+  color: #050505;
   margin-top: 15px;
 }
 
@@ -263,7 +265,7 @@ a:focus {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border: 1px solid transparent;
-  border-radius: 0;
+  border-radius: 20px;
 }
 
 .slider_section .detail-box .btn-box .btn-1:hover {
@@ -280,17 +282,19 @@ a:focus {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border: 1px solid transparent;
-  border-radius: 0;
+  border-radius: 20px;
 }
 
 .slider_section .detail-box .btn-box .btn-2:hover {
   background-color: transparent;
-  border-color: #ffffff;
-  color: #ffffff;
+  border-color: #252525;
+  color: #252525;
 }
 
 .slider_section .img-container .img-box img {
+  border-radius: 100%;
   width: 100%;
+  inset: 0%;
 }
 
 .slider_section #carouselExampleIndicators {
@@ -321,25 +325,33 @@ a:focus {
   height: 55px;
   border: none;
   border-radius: 100%;
+  border-color: whitesmoke;
+  border-width: 4px;
   opacity: 1;
   background-repeat: no-repeat;
   background-size: 14px;
   background-position: center;
-  background-color: #1cbbb4;
+  background-color: #c1e4c4;
   margin: 2px;
 }
 
 .slider_section .carousel_btn-container .carousel-control-prev:hover,
 .slider_section .carousel_btn-container .carousel-control-next:hover {
-  background-color: #ff4f5a;
+  background-color: #c1e4c4;
+  border-color: whitesmoke;
+  border-width: 4px;
 }
 
 .slider_section .carousel_btn-container .carousel-control-prev {
   background-image: url(../images/prev.png);
+  border-color: whitesmoke;
+  border-width: 4px;
 }
 
 .slider_section .carousel_btn-container .carousel-control-next {
   background-image: url(../images/next.png);
+  border-color: whitesmoke;
+  border-width: 4px;
 }
 
 .slider_section ol.carousel-indicators {
@@ -348,6 +360,8 @@ a:focus {
   bottom: 45px;
   left: initial;
   right: 25px;
+  border-color: whitesmoke;
+  border-width: 4px;
 }
 
 .slider_section ol.carousel-indicators li {
@@ -359,6 +373,8 @@ a:focus {
   background-color: transparent;
   opacity: 1;
   display: none;
+  border-color: whitesmoke;
+  border-width: 4px;
 }
 
 .slider_section ol.carousel-indicators li.active {
@@ -399,7 +415,7 @@ a:focus {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border: 1px solid transparent;
-  border-radius: 0;
+  border-radius: 20px;
 }
 
 .experience_section .detail-box .btn-box .btn-1:hover {
@@ -411,12 +427,12 @@ a:focus {
 .experience_section .detail-box .btn-box .btn-2 {
   display: inline-block;
   padding: 10px 0;
-  background-color: #1a2e35;
+  background-color: #c1e4c4;
   color: #ffffff;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border: 1px solid transparent;
-  border-radius: 0;
+  border-radius: 20px;
 }
 
 .experience_section .detail-box .btn-box .btn-2:hover {
@@ -430,7 +446,7 @@ a:focus {
 }
 
 .category_section {
-  background-color: #1cbbb4;
+  background-color: #c1e4c4;
   color: #ffffff;
   text-align: center;
 }
@@ -513,7 +529,7 @@ a:focus {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border: 1px solid transparent;
-  border-radius: 0;
+  border-radius: 20px;
   margin-top: 25px;
 }
 
@@ -554,8 +570,8 @@ a:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #1a2e35;
-  border-radius: 100%;
+  background-color: #c1e4c4;
+  border-radius: 20px;
   margin-right: 35px;
 }
 
@@ -577,7 +593,7 @@ a:focus {
 }
 
 .freelance_section .tab_container .t-link-box[aria-expanded="true"] .img-box, .freelance_section .tab_container .t-link-box:hover .img-box {
-  background-color: #1cbbb4;
+  background-color: #c1e4c4;
 }
 
 .freelance_section .img-box img {
@@ -619,7 +635,7 @@ a:focus {
   background-repeat: no-repeat;
   background-size: 10px;
   background-position: center;
-  background-color: #1a2e35;
+  background-color: #c1e4c4;
   margin: 2px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -636,7 +652,7 @@ a:focus {
 /* info section */
 .info_section {
   position: relative;
-  background-color: #1a2e35;
+  background-color: #c1e4c4;
   color: #ffffff;
 }
 
@@ -675,7 +691,7 @@ a:focus {
 }
 
 .info_section .info_top .info_logo span {
-  color: #ffffff;
+  color: #050505;
   font-weight: bold;
   font-size: 32px;
 }
@@ -847,7 +863,7 @@ a:focus {
   display: block;
   width: 34px;
   height: 4px;
-  background-color: #fff;
+  background-color: #050505;
   margin: 7px 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
