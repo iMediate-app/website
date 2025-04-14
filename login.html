@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>iMediate Login</title>
+  <title>iMediate Login V2</title>
   <style>
     body {
       font-family: sans-serif;
@@ -78,4 +78,29 @@
 
       const isAuthenticated = await auth0.isAuthenticated();
 
-      document.getElementById("login").style.display = isAuthenticated ? "none" : "
+      document.getElementById("login").style.display = isAuthenticated ? "none" : "inline-block";
+      document.getElementById("logout").style.display = isAuthenticated ? "inline-block" : "none";
+
+      if (isAuthenticated) {
+        const user = await auth0.getUser();
+        document.getElementById("user").style.display = "block";
+        document.getElementById("user").textContent = `Hello, ${user.name}`;
+      }
+    }
+
+    window.onload = async () => {
+      await initAuth0();
+
+      document.getElementById("login").addEventListener("click", () => {
+        auth0.loginWithRedirect();
+      });
+
+      document.getElementById("logout").addEventListener("click", () => {
+        auth0.logout({
+          returnTo: "https://imediate-app.github.io/website/"
+        });
+      });
+    };
+  </script>
+</body>
+</html>
