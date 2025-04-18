@@ -21,6 +21,7 @@ header {
   background: #fff;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   z-index: 10;
+  border-radius: 0px 0px 16px 16px;
 }
 .header-container {
   max-width: 1200px;
@@ -174,7 +175,6 @@ header {
   color: #2D6331;
   cursor: pointer;
   border-radius: 40px;
-  border-radius: 1.5rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
 }
 
@@ -194,7 +194,6 @@ header {
   background: rgba(0,0,0,0.0);
   transition: opacity 0.3s ease;
   color: #fff;
-  border-radius: 1.5rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
   text-align: center;
   font-size: x-large;
@@ -399,6 +398,19 @@ footer {
   .hero-buttons.fade-out {
     opacity: 0;
     pointer-events: none;
+  }
+  .hero-section h1 {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+    color: #fff;
+  }
+  .hero-section h3 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+    color: #fff;
   }
   .overlay {
     visibility: hidden;
