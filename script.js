@@ -95,3 +95,6 @@ if (!sessionStorage.getItem('localePopupDismissed')) {
       console.error('Geolocation check failed:', error);
     });
 }
+
+// Auto-fill the current year
+document.getElementById("year").textContent = new Date().getFullYear();

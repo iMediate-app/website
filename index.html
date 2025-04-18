@@ -21,29 +21,28 @@
 </head>
 <body>
 
-
-  <!-- HEADER -->
-  <header>
-    <div class="header-container">
-      <h1 class="logo"><i>iMediate</i></h1>
-     <div class="language">
-       <div>
-          <a href="https://imediate-app.github.io/website/nl.html" class="flag-link" title="Switch to Dutch site">🇳🇱</a>  
-        </div>
-            
-        <nav class="nav">
-         <div class="menu-toggle">☰</div>
-          <ul class="menu-list">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#instagram">Instagram</a></li>
-            <li><a href="#signup">Sign Up</a></li>
-           <li><a href="#footer">Contact</a></li>
-          </ul>
-        </nav>
+<!-- HEADER (reuse from index.html if shared across pages) -->
+<header>
+  <div class="header-container">
+    <h1 class="logo"><i>iMediate</i></h1>
+   <div class="language">
+     <div>
+        <a href="./nl.html" class="flag-link" title="Switch to Dutch site">🇳🇱</a>  
       </div>
+          
+      <nav class="nav">
+       <div class="menu-toggle">☰</div>
+        <ul class="menu-list">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="https://www.instagram.com/imediate_app/">Instagram</a></li>
+          <li><a href="#signup">Sign Up</a></li>
+         <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </header>
+  </div>
+</header>
 
   <!-- HERO SECTION -->
   <section id="hero" class="hero-section">
@@ -106,18 +105,18 @@
   <section id="about" class="about-section">
     <div class="about-container">
       <div class="about-text">
-        <h2>About <i>iMediate</i></h2>
+        <h2>What is <i>iMediate</i></h2>
         <p>
-          iMediate is a shared parenting app designed to help families stay connected, 
+          iMediate is a <b>parenting app</b> designed to help families stay connected, 
           organized, and focused on what matters most: their children.
           <br> Whether living together or apart, parents can use iMediate to coordinate schedules, share 
-          updates, and manage day-to-day responsibilities—all in one secure place. 
+          updates, and <b>manage day-to-day</b> responsibilities—all in one secure place. 
           <br>
-          <br>By reducing miscommunication and making planning easier, iMediate helps 
+          <br>By reducing miscommunication and <b>making planning easier</b>, iMediate helps 
           create calmer routines, stronger collaboration, and more time for quality 
           moments with your kids. 
-          <br>Our goal is to support modern families with tools
-          that build trust, reduce stress, and put children’s well-being at the 
+          <br>Our goal is to <b>support modern families</b> with tools
+          that build trust, reduce stress, and put <b>children’s well-being</b> at the 
           heart of every decision.
 
 
@@ -195,11 +194,35 @@
   </section>
 
   <!-- FOOTER -->
-  <footer id="footer">
-    <div class="footer-container">
-      <p>
-        Our Values: Integrity | Innovation | Inclusion | Excellence
-      </p>
+  <footer class="footer">
+    <div class="footer-content">
+      <!-- Left Column: Values -->
+      <div class="footer-left">
+        <div class="values">
+          <h2>Our Values</h2>
+          <ul>
+            <li><strong>Clarity</strong> <p>We make complex situations simple and understandable.</p></li>
+            <li><strong>Empathy</strong> <p>We see parents as people first. Always reflect the human connection.</p></li>
+            <li><strong>Neutrality</strong> <p>We’re never on “one parent’s side.” Work with both in balance.</p></li>
+            <li><strong>Empowerment</strong> <p>Be encouraging, never condescending.</p></li>
+            <li><strong>Structure + Support</strong> <p>Communication, organization and peace of mind.</p></li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Right Column: Logo + Links -->
+      <div class="footer-right">
+        <h1 class="logo"><i>iMediate</i></h1>
+        <div class="footer-links">
+          <a href="./privacy.html">Privacy Policy</a>
+          <a href="./terms.html">Terms of Use</a>
+          <a href="./contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      &copy; <span id="year"></span> iMediate. All rights reserved.
     </div>
   </footer>
 
