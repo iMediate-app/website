@@ -21,12 +21,19 @@
 </head>
 <body>
 
+
   <!-- HEADER -->
   <header>
     <div class="header-container">
       <h1 class="logo"><i>iMediate</i></h1>
+      <div id="google_translate_element"></div>
+  
       <nav class="nav">
-        <div class="menu-toggle">☰</div>
+        <div class="menu-controls">
+          <div class="menu-toggle">☰</div>
+          <a href="https://imediate-app.github.io/website/nl.html" class="flag-link" title="Ga naar de Nederlandse site">🇳🇱</a>
+        </div>
+  
         <ul class="menu-list">
           <li><a href="#hero">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -37,6 +44,7 @@
       </nav>
     </div>
   </header>
+  
 
   <!-- HERO SECTION -->
   <section id="hero" class="hero-section">
@@ -81,7 +89,8 @@
         </div>
         <div class="hero-content">
           <h1>Single Parents</h1>
-          <h3>Support when you're doing it solo—and a way to loop in your village.</h3>
+          <h3>Support when you're doing it solo 
+            <br>and a way to loop in your village.</h3>
           <a href="https://imediate-co-parenting.webflow.io/">
             <button class="cta">Learn More</button>
           </a>
@@ -122,7 +131,7 @@
     <h2>Why People Love iMediate</h2>
     <ul class="features-list">
       <li>
-        <strong>All-in-One Co-Parenting Hub:</strong><p>iMediate brings calendars, messages, agreements, and reminders into one shared space — so both parents stay on the same page.</p>
+        <strong>All-in-One Co-Parenting Hub:</strong><p>iMediate brings calendars, messages, agreements, and reminders into one shared space, so both parents stay on the same page.</p>
       </li>
       <li>
         <strong>Smart Shared Scheduling:</strong><p> Coordinate drop-offs, holidays, and events with clarity. Calendar entries are structured and logged, ready for reference or documentation.</p>
@@ -131,13 +140,13 @@
         <strong>Organized Communication:</strong><p> Keep all co-parenting messages in one place, separate from personal texts. iMediate makes it easy to track agreements and reduce conflict.</p>
       </li>
       <li>
-        <strong>Built for Legal Peace of Mind:</strong><p> Every interaction can be turned into court-ready documentation — ideal for family law cases, mediation, or simply staying accountable.</p>
+        <strong>Built for Legal Peace of Mind:</strong><p> Every interaction can be turned into court-ready documentation, ideal for family law cases, mediation, or simply staying accountable.</p>
       </li>
       <li>
         <strong>Seamless Integration:</strong> <p>iMediate works alongside your existing tools like Google Calendar and Outlook, syncing events and details automatically.</p>
       </li>
       <li>
-        <strong>Works Across Devices:</strong> <p>Access iMediate anytime from your phone or desktop — everything stays synced and secure.</p>
+        <strong>Works Across Devices:</strong> <p>Access iMediate anytime from your phone or desktop, everything stays synced and secure.</p>
       </li>
       <li>
         <strong>Shared Access & Permissions:</strong> <p>Grant access to professionals (like mediators or lawyers) or caregivers when needed, with full control over who sees what.</p>
@@ -172,5 +181,14 @@
   </footer>
 
   <script src="script.js"></script>
+
+  <div id="locale-popup" class="locale-popup hidden">
+    <div class="popup-content">
+      <p>In Nederland? Overschakelen naar de Nederlandse versie van onze site?</p>
+      <button id="switch-dutch">Ja, Nederlands!</button>
+      <button id="dismiss-popup">No thanks</button>
+    </div>
+  </div>
+  
 </body>
 </html>

@@ -53,7 +53,27 @@ header {
 }
 .menu-list.open {
   display: block;
+  padding: 16px;
+  margin: 4px;
+  display: flex;
+
 }
+.menu-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.flag-link {
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.flag-link:hover {
+  transform: scale(1.1);
+}
+
 
 /* HERO */
 .hero-section {
@@ -241,6 +261,31 @@ footer {
   text-align: center;
 }
 
+/* POPUP LOCAL */
+
+.locale-popup.hidden {
+  display: none;
+}
+
+.locale-popup {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+.popup-content button {
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+
 /* RESPONSIVE */
 @media (max-width: 820px) {
   .menu-toggle {
@@ -273,6 +318,13 @@ footer {
     color: #fff;
     text-align: center;
     font-size: x-large;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    pointer-events: auto;
+  }
+  .hero-buttons.fade-out {
+    opacity: 0;
+    pointer-events: none;
   }
   .overlay {
     visibility: hidden;
