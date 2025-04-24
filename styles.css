@@ -389,7 +389,7 @@ header {
 }
 
 .instagram-section .body-text p {
-  padding: 40px;
+  padding: 0px;
   
 }
 
@@ -399,7 +399,7 @@ header {
   border-radius: 1rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
   max-width: 800px;
-  padding-top: 40px;
+  padding: 40px;
 
 }
 
@@ -622,11 +622,41 @@ header {
   flex-direction: row-reverse;
 }
 
+
+/* PAGE BREAK */
+.page-break-section {
+  padding: 4rem 1rem;
+  text-align: center;
+  background-color: #c1e4c4;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
 /* FEATURE GRID */
 .feature-grid-section {
   padding: 4rem 1rem;
-  background: #f9f9fb;
   text-align: center;
+  background-image: url('images/CoParenting.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
 .feature-grid {

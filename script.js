@@ -109,3 +109,10 @@ document.getElementById("year").textContent = new Date().getFullYear();
       }
     });
   });
+
+
+  // Initialize AOS (Animate On Scroll)
+AOS.init({
+  once: true,
+  duration: 600
+});
