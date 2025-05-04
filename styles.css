@@ -948,10 +948,15 @@ r
 
 
 /* FEATURE GRID */
-.feature-grid-section .features-section-imagebg .features-section-imagebg2 {
+.feature-grid-section {
   background-attachment: scroll;
 }
-
+.features-section-imagebg  {
+  background-attachment: scroll;
+}
+.features-section-imagebg2 {
+  background-attachment: scroll;
+}
 
   .feature-grid {
     display: contents;
