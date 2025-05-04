@@ -941,22 +941,21 @@ r
     margin-top: 2rem;
   }
 
-  .instagram-section {
-    /* mobile: allow normal scaling */
-    background-attachment: scroll;
+  .instagram-section .feature-grid-section .features-section-imagebg .features-section-imagebg2 {
+    position: relative;
+    z-index: 1;              /* content above the background */
+  }
+  
+  .instagram-section::before {
+    content: "";
+    position: fixed;         /* lock to viewport */
+    top: 0; left: 0;         /* fill entire screen */
+    width: 100vw;
+    height: 100vh;
+    background: url('images/HappyFamily.jpg') center/cover no-repeat;
+    z-index: -1;             /* behind everything */
   }
 
-
-/* FEATURE GRID */
-.feature-grid-section {
-  background-attachment: scroll;
-}
-.features-section-imagebg  {
-  background-attachment: scroll;
-}
-.features-section-imagebg2 {
-  background-attachment: scroll;
-}
 
   .feature-grid {
     display: contents;
