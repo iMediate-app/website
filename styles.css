@@ -296,7 +296,7 @@ header {
 }
 .about-text.visible {
   transform: translateX(0);
-  opacity: 1;
+  opacity: 1;   
 }
 .about-image img {
   max-height: 420px;
@@ -356,7 +356,7 @@ header {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
   margin: 0 auto;
   justify-content: center;
-  display: flowr;
+  display: flow;
 }
 
 .features-section h2 {
@@ -968,15 +968,6 @@ header {
     z-index: -1;             /* behind everything */
   }
 
-  .features-section-imagebg::before {
-    content: "";
-    position: fixed;         /* lock to viewport */
-    top: 0; left: 0;         /* fill entire screen */
-    width: 100vw;
-    height: 100vh;
-    background: url('images/singleparent.jpg') center/cover no-repeat;
-    z-index: -1;             /* behind everything */
-  }
 
   .features-section-imagebg::before {
     content: "";
