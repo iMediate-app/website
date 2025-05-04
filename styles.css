@@ -83,11 +83,17 @@ header {
   gap: 0.5rem;
 }
 .language {
-  width: 24rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  max-width: 800px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
 }
+
 .flag-link {
   text-decoration: none;
   font-size: 1.5rem;
@@ -304,13 +310,54 @@ header {
   }
 
  /* FEATURESs */ 
+
  .features-section {
+  padding: 4rem 1rem;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   padding: 3rem 1.5rem;
-  background: #f9f9fb;
   border-radius: 1.5rem;
+  background-color: white;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
+  display: flow;
+  justify-content: center;
+}
+
+ .features-section-imagebg {
+  padding: 4rem 1rem;
+  text-align: center;
+  background-image: url('images/singleparent.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 3rem 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
+  justify-content: center;
+  display: flow;
+}
+
+ /* FEATURESs */ 
+ .features-section-imagebg2 {
+  padding: 4rem 1rem;
+  text-align: center;
+  background-image: url('images/CoParenting.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #000000;
+  padding: 3rem 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
+  justify-content: center;
+  display: flowr;
 }
 
 .features-section h2 {
@@ -332,6 +379,8 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
+  max-width: 1000px;
+  justify-self: center;
 }
 
 .features-list li {
@@ -407,6 +456,13 @@ header {
 /* SIGN-UP */
 .signup-section {
   padding: 4rem 1rem;
+  display: flex;
+  padding: 40px;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 .signup-container {
   max-width: 400px;
@@ -523,6 +579,64 @@ header {
   border-radius: 40px;
 }
 
+/* === CONTACT - Container & Section === */
+.contact-section {
+  padding-top: 120px;
+  background-color: #f9f9fc;
+  height:fit-content;
+  padding-bottom: 40px;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* === Card === */
+.contact-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+/* === Title === */
+.contact-card__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.contact-card__title em {
+  font-style: normal;
+  color: #4a90e2;
+}
+
+/* === Contact List === */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.contact-list__item {
+  margin: 0.5rem 0;
+}
+.contact-list__link {
+  text-decoration: none;
+  font-size: 1.125rem;
+  transition: color 0.2s;
+}
+.contact-list__link:hover {
+  color: #c1e4c4;
+}
+
+/* === Mission === */
+.contact-card__mission {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
 
 /* ProParent */
 
@@ -573,10 +687,13 @@ header {
 }
 
 .cta-group {
+  align-items: center;
+  max-width: 1000px;
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
   justify-content: center;
+
 }
 .cta.primary {
   background: #2D6331;
