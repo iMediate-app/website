@@ -812,7 +812,7 @@ header {
   }
 
   .feature-grid {
-    display: grid;
+    display: contents;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
