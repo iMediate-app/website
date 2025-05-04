@@ -297,6 +297,7 @@ header {
 .about-text.visible {
   transform: translateX(0);
   opacity: 1;
+  min-width: 340px;
   max-width: 40%;
 }
 .about-image img {
@@ -943,7 +944,7 @@ header {
     margin-top: 2rem;
   }
 
-  .instagram-section .features-section-imagebg .features-section-imagebg2 {
+  .instagram-section .features-section-imagebg .features-section-imagebg2 .feature-grid-section {
     position: relative;
     z-index: 1;              /* content above the background */
   }
@@ -955,6 +956,26 @@ header {
     width: 100vw;
     height: 100vh;
     background: url('images/HappyFamily.jpg') center/cover no-repeat;
+    z-index: -1;             /* behind everything */
+  }
+
+  .feature-grid-section::before{
+    content: "";
+    position: fixed;         /* lock to viewport */
+    top: 0; left: 0;         /* fill entire screen */
+    width: 100vw;
+    height: 100vh;
+    background: url('images/singleparent.jpg') center/cover no-repeat;
+    z-index: -1;             /* behind everything */
+  }
+
+  .features-section-imagebg::before {
+    content: "";
+    position: fixed;         /* lock to viewport */
+    top: 0; left: 0;         /* fill entire screen */
+    width: 100vw;
+    height: 100vh;
+    background: url('images/singleparent.jpg') center/cover no-repeat;
     z-index: -1;             /* behind everything */
   }
 
