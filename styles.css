@@ -465,11 +465,11 @@ header {
   flex-wrap: nowrap;
 }
 .signup-container {
-  max-width: 400px;
-  margin: 0 auto;
+  max-width: 340px;
   text-align: center;
 }
 
+r
 /* FOOTER */
 .footer {
   background-color: #c1e4c4;
@@ -854,7 +854,7 @@ header {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
   .language {
-    width: 5rem;
+    width: 50%;
     display: flex;
     justify-content: space-around;
   }
