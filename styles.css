@@ -297,6 +297,7 @@ header {
 .about-text.visible {
   transform: translateX(0);
   opacity: 1;
+  max-width: 40%;
 }
 .about-image img {
   max-height: 420px;
@@ -319,7 +320,6 @@ header {
   background-repeat: no-repeat;
   background-attachment: fixed;
   padding: 3rem 1.5rem;
-  border-radius: 1.5rem;
   background-color: white;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
   max-width: 1200px;
@@ -482,10 +482,11 @@ header {
   text-align: center;
 }
 
-r
 /* FOOTER */
 .footer {
   background-color: #c1e4c4;
+  height: auto;
+  width: auto;
   color: #333;
   padding: 60px 20px 40px;
   font-family: Garamond, serif;
@@ -726,6 +727,7 @@ r
 
 /* SPLIT SECTION */
 .split-section {
+  background-color: white;
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
@@ -804,7 +806,7 @@ r
 }
 
 .testimonials-section {
-  background-image: url('path/to/your-image.jpg');
+  background-color: white;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -941,7 +943,7 @@ r
     margin-top: 2rem;
   }
 
-  .instagram-section .feature-grid-section .features-section-imagebg .features-section-imagebg2 {
+  .instagram-section .features-section-imagebg .features-section-imagebg2 {
     position: relative;
     z-index: 1;              /* content above the background */
   }
@@ -953,6 +955,26 @@ r
     width: 100vw;
     height: 100vh;
     background: url('images/HappyFamily.jpg') center/cover no-repeat;
+    z-index: -1;             /* behind everything */
+  }
+
+  .features-section-imagebg::before {
+    content: "";
+    position: fixed;         /* lock to viewport */
+    top: 0; left: 0;         /* fill entire screen */
+    width: 100vw;
+    height: 100vh;
+    background: url('images/singleparent.jpg') center/cover no-repeat;
+    z-index: -1;             /* behind everything */
+  }
+
+  .features-section-imagebg2::before {
+    content: "";
+    position: fixed;         /* lock to viewport */
+    top: 0; left: 0;         /* fill entire screen */
+    width: 100vw;
+    height: 100vh;
+    background: url('images/CoParenting.jpg') center/cover no-repeat;
     z-index: -1;             /* behind everything */
   }
 
