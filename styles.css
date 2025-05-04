@@ -476,6 +476,7 @@ header {
   align-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  background-color: #fff;
 }
 .signup-container {
   max-width: 340px;
@@ -944,6 +945,7 @@ header {
   }
 
   .instagram-section .features-section-imagebg .features-section-imagebg2 .feature-grid-section {
+    background-attachment: scroll;
     position: relative;
     z-index: 1;              /* content above the background */
   }
