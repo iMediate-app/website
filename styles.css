@@ -946,24 +946,12 @@ r
     background-attachment: scroll;
   }
 
+
 /* FEATURE GRID */
-.feature-grid-section {
-  padding: 4rem 1rem;
-  text-align: center;
-  background-image: url('images/CoParenting.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  max-height: 100%;
-  display: flex;
-  gap: 40px;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
+.feature-grid-section .features-section-imagebg .features-section-imagebg2 {
+  background-attachment: scroll;
 }
+
 
   .feature-grid {
     display: contents;
