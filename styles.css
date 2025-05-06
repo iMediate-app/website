@@ -675,7 +675,7 @@ header {
   display: inline;
   text-align: center;
   padding: 3rem 1.5rem;
-  background: #c1e4c4de;
+  background: #c1e4c4de; 
   border-radius: 1.5rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
   max-width: 800px;
@@ -989,14 +989,85 @@ header {
 
 }
 
-
-
 @media (min-width: 821px) {
 
   .feature-grid {
     justify-self: center;
   }
 }
+
+/* ABOUT COMIC */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+.comicbook {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+}
+
+.panel {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  max-height: 200px;
+}
+
+.panel img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;r
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  background: #c1e4c4de;
+  color: #2D6331;
+  padding: 10px;
+  width: 100%;
+  height: 6rem;
+  font-size: 1rem;
+  text-align: left;
+  font-family: 'garamond';
+  justify-content: center;
+  text-justify: auto;
+}
+
+/* Tablet & desktop view - stack panels in 2s or 3s */
+@media (min-width: 768px) {
+  .comicbook {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .panel {
+    margin: 0;
+  }
+
+  .caption {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .comicbook {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 
 /* PRIVACY & LEGAL PAGES */
 .legal-hero {
