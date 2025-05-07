@@ -170,6 +170,7 @@ header {
   font-size: xx-large;
   font-weight:100;
   z-index: 1;
+  background-attachment: fixed;
 }
 .overlay.fade-out {
   opacity: 0;
@@ -274,6 +275,15 @@ header {
 .about-section {
   padding: 4rem 1rem;
   max-height: 100%;
+  display: grid;  
+  grid-template-columns: repeat(
+    auto-fit,           /* collapse unused tracks */
+    minmax(250px, 1fr)  /* each box at least 250px wide, otherwise share space */
+  );
+  gap: 2rem;
+  padding: 4rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 .about-container {
   max-width: 1000px;
@@ -291,7 +301,6 @@ header {
   background: #f9f9fb;
   border-radius: 1.5rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-  max-width: 800px;
   margin: 0 auto;
 }
 .about-text.visible {
@@ -299,7 +308,7 @@ header {
   opacity: 1;   
 }
 .about-image img {
-  max-height: 420px;
+  height: auto;
   object-fit: cover;
   padding: 3rem 1.5rem;
   background: #f9f9fb;
@@ -321,7 +330,7 @@ header {
   padding: 3rem 1.5rem;
   background-color: white;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   display: flow;
   justify-content: center;
@@ -383,10 +392,11 @@ header {
 }
 
 .features-list li {
-  background-color: #f9f9f9;
-  border-radius: 12px;
+  background: #f9f9fb;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
   padding: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -456,10 +466,11 @@ header {
 }
 
 .insta-text {
-  justify-content: center;
   background: #f9f9fb;
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
+  justify-content: center;
   max-width: 800px;
   padding: 40px;
 
@@ -469,8 +480,17 @@ header {
 /* SIGN-UP */
 .signup-section {
   padding: 4rem 1rem;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 3rem 1.5rem;
+  background-color: white;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  max-width: 1000px;
+  margin: 0 auto;
   display: flex;
-  padding-top: 40px;
   justify-content: center;
   flex-direction: column;
   align-content: center;
@@ -486,6 +506,7 @@ header {
 /* FOOTER */
 .footer {
   background-color: #c1e4c4;
+  box-shadow: 8px 0 24px rgba(0, 0, 0, 0.05);
   height: auto;
   width: auto;
   color: #333;
@@ -596,8 +617,25 @@ header {
 
 /* === CONTACT - Container & Section === */
 .contact-section {
+  padding: 4rem 1rem;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 3rem 1.5rem;
+  background-color: white;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: white;
   padding-top: 120px;
-  background-color: #f9f9fc;
   height:fit-content;
   padding-bottom: 40px;
 }
@@ -667,6 +705,7 @@ header {
   background-position: center;
   padding: 2rem;
   color: white;
+  background-attachment: fixed;
 }
 
 .hero-alt-text {
@@ -719,7 +758,7 @@ header {
 }
 .cta {
   padding: 0.75rem 1.5rem;
-  border-radius: 40px;
+  border-radius: 1rem;
   font-weight: bold;
   text-decoration: none;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -741,6 +780,7 @@ header {
   flex: 1 1 45%;
   padding: 1rem;
   align-content: center;
+  max-width: 1000px;
 }
 
 .split-image {
@@ -754,16 +794,26 @@ header {
   flex-direction: row-reverse;
 }
 
+/* Text Headers */
+
+.header-text {
+  margin: 0rem 6rem 0rem 6rem;
+  padding: 2rem;
+  opacity: 1;
+  background: #f9f9fb;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
 
 /* PAGE BREAK */
 .page-break-section {
   padding: 4rem 1rem;
+  justify-self: center;
+  width: 100%;
+  max-width: 1000px;
   text-align: center;
-  background-color: #c1e4c4;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: #fffafa;
+  background: linear-gradient(180deg, rgba(255, 250, 250, 1) 0%, rgba(193, 228, 196, 1) 100%);
   display: flex;
   gap: 40px;
   align-items: center;
@@ -771,6 +821,7 @@ header {
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
 }
 
 /* FEATURE GRID */
@@ -986,6 +1037,9 @@ header {
     align-items: center;
     margin-top: 16px;
   }
+  .header-text {
+    width: 100%;
+  }
 
 }
 
@@ -994,6 +1048,7 @@ header {
   .feature-grid {
     justify-self: center;
   }
+
 }
 
 /* ABOUT COMIC */
@@ -1009,25 +1064,38 @@ body {
 }
 
 .comicbook {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 800px;
+  display: grid;
+  /* override the flex‐width:100% so grid can shrink to its tracks’ total width */
+  width: auto;           
+  max-width: 800px;      /* or whatever your limit is */
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  padding: 16px;
+  justify-content: space-evenly;  /* center the three‑column block in its parent */
 }
 
 .panel {
   position: relative;
   width: 100%;
-  margin: 0 auto;
+  max-height: 240px;
+  height: auto; /* Adjust height based on image ratio */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
-  max-height: 200px;
+  margin: 0 auto;
+  border-radius: 8px;
+  margin-top: 20px;
+  align-items: baseline;
 }
 
 .panel img {
   width: 100%;
+  height: auto;
   display: block;
-  border-radius: 8px;r
+  border-radius: 8px;
 }
+
 
 .caption {
   position: absolute;
@@ -1036,12 +1104,13 @@ body {
   color: #2D6331;
   padding: 10px;
   width: 100%;
-  height: 6rem;
+  height:fit-content;
   font-size: 1rem;
   text-align: left;
   font-family: 'garamond';
   justify-content: center;
   text-justify: auto;
+  border-radius: 8px;
 }
 
 /* Tablet & desktop view - stack panels in 2s or 3s */
