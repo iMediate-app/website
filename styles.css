@@ -1064,7 +1064,7 @@ body {
 }
 
 .comicbook {
-  display: grid;
+  display: flex;
   /* override the flex‐width:100% so grid can shrink to its tracks’ total width */
   width: auto;           
   max-width: 800px;      /* or whatever your limit is */
@@ -1072,6 +1072,7 @@ body {
   gap: 16px;
   padding: 16px;
   justify-content: space-evenly;  /* center the three‑column block in its parent */
+  flex-direction: column;
 }
 
 .panel {
@@ -1079,12 +1080,12 @@ body {
   width: 100%;
   max-height: 240px;
   height: auto; /* Adjust height based on image ratio */
-  display: flex;
+  display: inline;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   margin: 0 auto;
-  border-radius: 8px;
+  border-radius: 1.5rem;
   margin-top: 20px;
   align-items: baseline;
 }
@@ -1093,7 +1094,7 @@ body {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 8px;
+  border-radius: 1.5rem;
 }
 
 
@@ -1106,11 +1107,11 @@ body {
   width: 100%;
   height:fit-content;
   font-size: 1rem;
-  text-align: left;
+  text-align: center;
   font-family: 'garamond';
   justify-content: center;
   text-justify: auto;
-  border-radius: 8px;
+  border-radius: 0 0 1.5rem 1.5rem;
 }
 
 /* Tablet & desktop view - stack panels in 2s or 3s */
