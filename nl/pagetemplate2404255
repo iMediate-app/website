@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The iMediate Foundation</title>
+  <title>iMediate</title>
   <link rel="stylesheet" href="styles.css" />
 
   <!-- Hotjar Tracking Code for Site 6375615 (name missing) -->
@@ -23,20 +23,17 @@
 
 <!-- HEADER (reuse from index.html if shared across pages) -->
 <header>
-  <a href="./index.html">
   <div class="header-container">
-    <h1 class="logo">.iM</i></h1>
+    <h1 class="logo"><i>iMediate</i></h1>
    <div class="language">
      <div>
-        <a href="./nl/index.html" class="flag-link" title="Switch to Dutch site">🇳🇱</a>  
+        <a href="./nl.html" class="flag-link" title="Switch to Dutch site">🇳🇱</a>  
       </div>
-  </a>
           
       <nav class="nav">
        <div class="menu-toggle">☰</div>
         <ul class="menu-list">
           <li><a href="./index.html">Home</a></li>
-          <li><a href="foundation.html">Foundation</a></li>
           <li><a href="./about.html">About</a></li>
           <li><a href="https://www.instagram.com/imediate_app/">Instagram</a></li>
           <li><a href="#signup">Sign Up</a></li>
@@ -47,184 +44,7 @@
   </div>
 </header>
 
-  <!-- HERO SECTION -->
-  <section id="hero" class="hero-section">
-    <!-- new overlay text -->
-    <div class="hero-top-message">
-      <h1>The <i>iMediate</i> Foundation</h1>
-      <i>What is your situation?</i>
-    </div>
-    <div class="overlay">
-      <div class="hero-text">
-        <h2>The <i>iMediate</i> Foundation</h2>
-        <p><i>Empowering Parents, Simplifying Scheduling</i></p>
-      </div>
-    </div>
-    <div class="hero-container">
-      <div class="hero-item" style="background-image: url(images/ParentingTogether.jpg);">
-        <div class="hero-buttons">
-          <a href="./ProParent.html">
-            <button class="cta">We Parent together</button>
-          </a>
-        </div>
-        <div class="hero-content">
-          <h1>Parenting Together</h1>
-          <h3>Stay organized and connected 
-            <br>in your child’s day-to-day life.</h3>
-          <a href="./ProParent.html">
-            <button class="cta">Learn More</button>
-          </a>
-        </div>
-      </div>
-      <div class="hero-item" style="background-image: url(images/CoParenting.jpg);">
-        <div class="hero-buttons">
-          <a href="./CoParent.html">
-            <button class="cta">We are Co-Parents</button>
-          </a>
-        </div>
-        <div class="hero-content">
-          <h1>Co-Parenting</h1>
-          <h3>Reduce conflict. Create clarity.
-            <br>Build a healthy co-parenting rhythm.</h3>
-          <a href="./CoParent.html">
-            <button class="cta">Learn More</button>
-          </a>
-        </div>
-      </div>
-      <div class="hero-item" style="background-image: url(images/singleparent.jpg);">
-        <div class="hero-buttons">
-          <a href="./SingleParent.html">
-            <button class="cta">I am a Single Parent</button>
-          </a>
-        </div>
-        <div class="hero-content">
-          <h1>Single Parents</h1>
-          <h3>Support when you're doing it solo 
-            <br>and a way to loop in your village.</h3>
-          <a href="./SingleParent.html">
-            <button class="cta">Learn More</button>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
 
-    <!-- ALTERNATING SECTIONS -->
-    <section class="split-section" id="about">
-      <div class="split-text about-text visible">
-        <h2>Whats is <i>iMediate</i>?</h2>
-        <p>
-          iMediate is a foundation that campaigns for the inclusion of digital 
-          mediation as part of the legal process, supporting families with tools 
-          and resources to empower parents and simplify scheduling. 
-        </p><br>
-        <div class="cta-group">
-          <a href="./foundation.html" class="cta secondary">The Foundation</a>
-        </div>
-      </div>
-      <div class="split-image" style="background-image: url('images/about.jpg');"></div>
-    </section>
-    
-    <section class="split-section reverse">
-      <div class="split-text about-text visible">
-        <h2>Smart Events & Automated Extraction</h2>
-        <p>
-          Whether living together or apart, parents can use iMediate to coordinate schedules, share 
-          updates, and <b>manage day-to-day</b> responsibilities—all in one secure place. 
-        </p><br>
-        <div class="cta-group">
-          <a href="./howdoesitwork.html" class="cta primary">See how it works!</a>
-        </div>
-      </div>
-      <div class="split-image" style="background-image: url('images/HIW_10.jpg');"></div>
-    </section>
-    
-    <section class="split-section">
-      <div class="split-text about-text visible">
-        <h2>Empowering Parents</h2>
-        <p>
-          Our goal is to <b>support modern families</b> with tools
-          that build trust, reduce stress, and put <b>children’s well-being</b> at the 
-          heart of every decision.
-          </p><br>
-          <div class="cta-group">
-            <a href="./about.html" class="cta secondary">Read our Origins Comic</a>
-          </div>
-      </div>
-      <div class="split-image" style="background-image: url('images/HIW_2.jpg');"></div>
-    </section>
-    
-    <section class="split-section reverse">
-      <div class="split-text about-text visible">
-        <h2>Made for Parents, by Parents</h2>
-        <p>
-          By reducing miscommunication and <b>making planning easier</b>, iMediate helps 
-          create calmer routines, stronger collaboration, and more time for quality 
-          moments with your kids. 
-        </p><br>
-        <div class="cta-group">
-          <a href="#signup" class="cta primary">Join the waitlist! </a>
-        </div>
-      </div>
-      <div class="split-image" style="background-image: url('images/HappyFamily.jpg');"></div>
-    </section>
-
-
-<!-- FEATURES SECTION -->
-<section class="features-section">
-  <h2>Why People Love <i>iMediate</i></h2>
-  <ul class="features-list">
-    <li>
-      <img src="images/All-in-One Co-Parenting Hub.jpg" alt="Parent Hub" class="feature-icon" />
-      <strong>All-in-One Co-Parenting Hub</strong>
-      <p>iMediate brings calendars, messages, agreements, and reminders into one shared space, so both parents stay on the same page.</p>
-    </li>
-    <li>
-      <img src="images/Smart Shared Scheduling.jpg" alt="Smart Events" class="feature-icon" />
-      <strong>Smart Shared Scheduling</strong>
-      <p>Coordinate drop-offs, holidays, and events with clarity. Calendar entries are structured and logged, ready for reference or documentation.</p>
-    </li>
-    <li>
-      <img src="images/Organized Communication.jpg" alt="Organized Communication" class="feature-icon" />
-      <strong>Organized Communication</strong>
-      <p>Keep all co-parenting messages in one place, separate from personal texts. iMediate makes it easy to track agreements and reduce conflict.</p>
-    </li>
-    <li>
-      <img src="images/Built for Legal Peace of Mind.jpg" alt="Court Ready" class="feature-icon" />
-      <strong>Built for Legal Peace of Mind</strong>
-      <p>Every interaction can be turned into court-ready documentation, ideal for family law cases, mediation, or simply staying accountable.</p>
-    </li>
-    <li>
-      <img src="images/Seamless Intg.jpg" alt="Seamless" class="feature-icon" />
-      <strong>Seamless Integration</strong>
-      <p>iMediate works alongside your existing tools like Google Calendar and Outlook, syncing events and details automatically.</p>
-    </li>
-    <li>
-      <img src="images/devices.jpg" alt="All Devices" class="feature-icon" />
-      <strong>Works Across Devices</strong>
-      <p>Access iMediate anytime from your phone or desktop, everything stays synced and secure.</p>
-    </li>
-    <li>
-      <img src="images/Shared Access Permissions.jpg" alt="Shared Access" class="feature-icon" />
-      <strong>Shared Access & Permissions</strong>
-      <p>Grant access to professionals (like mediators or lawyers) or caregivers when needed, with full control over who sees what.</p>
-    </li>
-    <li>
-      <img src="images/ShieldList.jpg" alt="Shield" class="feature-icon" />
-      <strong>Sheild<i>.im</i></strong>
-      <p>Shield keeps conversations calm and child-focused. It gives real-time guidance, so communication stays on track and centered on your kids.</p>
-    </li>
-    <li>
-      <img src="images/foundationicon.jpg" alt="Foundation" class="feature-icon" />
-      <strong>The <i>iMediate</i> Foundation</strong>
-      <p>Free or subsidized app access, personalized onboarding, and expert-led workshops to learn the power of iMediate.</p>
-    </li>
-  </ul>
-  <br>
-  <div class="cta-group">
-    <a href="./howdoesitwork.html" class="cta primary">See how it works!</a>
-  </div>
-</section>
 
   
 
@@ -268,7 +88,7 @@
   
       <!-- Right Column: Logo + Links -->
       <div class="footer-right">
-        <h1 class="logo"><i>The iMediate Foundation</i></h1>
+        <h1 class="logo"><i>iMediate</i></h1>
         <div class="footer-links">
           <a href="./privacy.html">Privacy Policy</a>
           <a href="./terms.html">Terms of Use</a>
@@ -278,7 +98,7 @@
     </div>
   
     <div class="footer-bottom">
-      &copy; <span id="year"></span> The iMediate Foundation. All rights reserved.
+      &copy; <span id="year"></span> iMediate. All rights reserved.
     </div>
   </footer>
 
