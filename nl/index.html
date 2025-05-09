@@ -32,6 +32,21 @@
   })(window,document,'script','dataLayer','GTM-NKLWRHGR');</script>
   <!-- End Google Tag Manager -->
 
+  <!-- Smart App Banner for iMediate iOS App -->
+  <meta name="apple-itunes-app" content="app-id=6744072106, app-argument=https://imediate.com">
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const appId = "6744072106";
+      const currentUrl = window.location.href;
+      const metaTag = document.createElement("meta");
+      metaTag.name = "apple-itunes-app";
+      metaTag.content = `app-id=${appId}, app-argument=${currentUrl}`;
+      document.head.appendChild(metaTag);
+    });
+  </script>  
+
+
 </head>
 
 <!-- Google tag (gtag.js) -->
