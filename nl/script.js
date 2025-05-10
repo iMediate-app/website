@@ -96,6 +96,21 @@ if (!sessionStorage.getItem('localePopupDismissed')) {
     });
 }
 
+// Callout hero 
+ document.addEventListener("DOMContentLoaded", function() {
+      const closeButton = document.querySelector(".close-callout");
+      const callout = document.getElementById("nanny-callout");
+
+      if (closeButton && callout) {
+        closeButton.addEventListener("click", function() {
+          callout.style.opacity = "0";
+          setTimeout(() => {
+            callout.style.display = "none";
+          }, 300);
+        });
+      }
+    });
+
 // Auto-fill the current year
 document.getElementById("year").textContent = new Date().getFullYear();
 
