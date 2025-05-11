@@ -5,6 +5,16 @@ toggleBtn.addEventListener('click', () => {
   menuList.classList.toggle('open');
 });
 
+//  MENU DROPDOWN
+    document.querySelectorAll('.submenu-toggle').forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            this.classList.toggle('active');
+            const submenu = this.nextElementSibling;
+            submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+
 // OVERLAY + HERO BUTTONS FADE (MOBILE OR DESKTOP)
 const overlay = document.querySelector('.overlay');
 const heroItems = document.querySelectorAll('.hero-item');
