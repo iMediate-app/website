@@ -165,6 +165,7 @@ header {
   margin: 4px;
   display: flex;
   border-radius: 1rem;
+  min-height: 40px;
 
 }
 .menu-controls {
@@ -190,6 +191,7 @@ header {
 .submenu-list li {
     white-space: nowrap;
     padding: var(--padding-main);
+    min-height: 40px;
 }
 
 .submenu-list li a {
