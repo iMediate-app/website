@@ -164,7 +164,7 @@ header {
   padding: var(--padding-main);
   margin: 4px;
   display: flex;
-  border-radius: 8px;
+  border-radius: 1rem;
 
 }
 .menu-controls {
@@ -172,6 +172,40 @@ header {
   align-items: center;
   gap: 0.5rem;
 }
+
+/* Submenu Styles */
+.submenu-list {
+    display: none;
+    list-style: none;
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: var(--box-shadow-main);
+    border-radius: 1rem;
+    width: max-content;
+    z-index: 9;
+    right: 60%;
+    padding: var(--padding-main);
+}
+
+.submenu-list li {
+    white-space: nowrap;
+    padding: var(--padding-main);
+}
+
+.submenu-list li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.menu-list li:hover .submenu-list {
+    display: block;
+}
+
+.submenu-toggle {
+    cursor: pointer;
+}
+
+
 .language {
   display: flex;
   justify-content: space-around;
@@ -1155,6 +1189,7 @@ header {
   font-size: var(--font-size-medium);
 }
 
+
   .language {
     width: 50%;
     display: flex;
@@ -1199,6 +1234,8 @@ header {
   .hero-section h1 {
     text-align: center;
     font-size: var(--font-size-medium);
+    margin: 0;
+    padding: 0;
     margin-bottom: 0.2rem;
     color: #fff;
   }
@@ -1206,6 +1243,8 @@ header {
     text-align: center;
     font-family: var(--font-family-main);
     font-size: var(--font-size-small);
+    margin: 0;
+    padding: 0;
     margin-bottom: 0.2rem;
     color: #fff;
   }
