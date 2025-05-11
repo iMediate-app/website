@@ -45,14 +45,6 @@ x
   --transition-main: 0.3s ease;
 }
 
-
-.eb-garamond <uniquifier> {
-  font-family: "EB Garamond", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-
 /* RESET & GLOBALS */
 * {
   margin: 0;
@@ -536,17 +528,21 @@ header {
  /* FEATURESs */ 
 
  .features-section {
-  padding: 4rem 1rem;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 2rem;
+  padding: var(--padding-large);
+  max-width: 1000px;
+  margin: 0 auto; 
   text-align: center;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  padding: var(--padding-main);
   background-color: white;
-  box-shadow:  var(--box-shadow-main);
   max-width: 1000px;
-  margin: 0 auto;
   display: flow;
   justify-content: center;
 }
@@ -590,16 +586,10 @@ header {
   color: #333;
 }
 
-.features-section {
-  padding: 40px 20px;
-  text-align: center;
-}
-
 .features-list4 {
 
   border-radius: 1.5rem;
   margin: 0 auto;
-  padding: var(--padding-main);
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -614,14 +604,20 @@ header {
   border-radius: 1.5rem;
   box-shadow:  var(--box-shadow-main);
   margin: 0 auto;
-  padding: var(--padding-main);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  padding: var(--padding-main);
+  margin: var(--margin-main);
 }
 
+.features-list4 img {
+  width: 40%;
+  height: 40%;
+  border-radius: 100%;
+}
 
 .features-list {
   list-style: none;
@@ -638,7 +634,6 @@ header {
   background: #f9f9fb;
   border-radius: 1.5rem;
   box-shadow:  var(--box-shadow-main);
-  margin: 0 auto;
   padding: var(--padding-main);
   display: flex;
   flex-direction: column;
@@ -647,14 +642,15 @@ header {
 }
 
 .feature-icon {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 15px;
+    width: 200px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-bottom: 15px;
 }
 
 .features-list strong {
+  padding: 1rem 0 1rem 0;
   display: block;
   margin-bottom: 10px;
   font-size: var(--font-size-medium);
@@ -663,8 +659,6 @@ header {
 .features-list p {
   font-size: var(--font-size-small);
   line-height: 1.4;
-  max-width: 240px;
-  margin: 0 auto;
 }
 
 /* INSTAGRAM */
@@ -712,7 +706,6 @@ header {
   background: #f9f9fb;
   border-radius: 1.5rem;
   box-shadow:  var(--box-shadow-main);
-  margin: 0 auto;
   justify-content: center;
   max-width: 800px;
   padding: var(--padding-main);
@@ -987,7 +980,7 @@ header {
   margin-bottom: 1rem;
   padding-left: 0;
   padding-right: 0;
-  padding bottom: 0;
+  padding-bottom: 0;
 }
 
 .hero-fullscreen h2 {
@@ -996,7 +989,7 @@ header {
   margin-bottom: 1rem;
   padding-left: 0;
   padding-right: 0;
-  padding bottom: 0;
+  padding-bottom: 0;
 }
 
 .hero-fullscreen p {
@@ -1071,7 +1064,7 @@ header {
 
 /* PAGE BREAK */
 .page-break-section {
-  padding: 4rem 1rem;
+  padding: var(--padding-large);
   justify-self: center;
   width: 100%;
   max-width: 1000px;
@@ -1090,7 +1083,7 @@ header {
 
 /* FEATURE GRID */
 .feature-grid-section {
-  padding: 4rem 1rem;
+  padding: var(--padding-main);
   text-align: center;
   background-image: url('images/CoParenting.jpg');
   background-size: cover;
@@ -1114,11 +1107,22 @@ header {
   max-width: 800px; 
 }
 .feature-card {
+  margin: var(--margin-small);
   background: white;
-  padding: var(--padding-main);
+  padding: var(--padding-large);
   border-radius: 1rem;
   box-shadow:  var(--box-shadow-main);
   width: 100%;
+}
+
+.feature-card img {
+  max-width: 120px;
+}
+
+.feature-card h3 {
+    margin: 0;
+    margin-top: 1rem;
+    padding: 0;
 }
 
 .testimonials-section {
@@ -1138,12 +1142,6 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-
-.testimonials-section .title h2 {
-}
-
-.testimonials-section .body-text p {
 }
 
 .testimonials-section .image-container img {
@@ -1300,6 +1298,13 @@ header {
   .instagram-section {
     background-attachment: scroll;
   }
+    .hero-fullscreen{
+    background-attachment: scroll;
+  }
+    .features-section {
+    background-attachment: scroll;
+    padding: var(--padding-large);
+  }
   .features-section-imagebg {
     background-attachment: scroll;
   }
@@ -1308,7 +1313,21 @@ header {
   }
   .feature-grid-section {
     background-attachment: scroll;
-    padding: var(--padding-larger);
+    padding: var(--padding-large);
+  }
+
+  .feature-card {
+    margin: var(--margin-small);
+    background: white;
+    padding: var(--padding-large);
+    border-radius: 1rem;
+    box-shadow:  var(--box-shadow-main);
+    width: 100%;
+  }
+
+    .feature-card img {
+      max-width: 320px;
+
   }
 
   .feature-grid {
@@ -1321,10 +1340,7 @@ header {
 
   .features-list4 {
   border-radius: 1.5rem;
-  box-shadow:  var(--box-shadow-main);
   margin: 0 auto;
-  padding: 20px;
-
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(auto, auto);
@@ -1347,11 +1363,17 @@ header {
   line-height: 1.4rem;
 }
 
+.features-list4 img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
   .features-list {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flow;
+    display: contents;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
     max-width: 1000px;
@@ -1495,7 +1517,6 @@ body {
   padding: var(--padding-main);
   max-width: 800px;
   margin: -50px auto 4rem;
-  background-color: ;
   border-radius: 1.5rem;
   box-shadow:  var(--box-shadow-main);
   position: relative;
