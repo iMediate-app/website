@@ -1,3 +1,9 @@
+
+// scroll fix
+document.addEventListener("DOMContentLoaded", function() {
+    document.body.style.height = `${document.body.scrollHeight + 120}px`;
+});
+
 // MOBILE MENU TOGGLE
 const toggleBtn = document.querySelector('.menu-toggle');
 const menuList = document.querySelector('.menu-list');
