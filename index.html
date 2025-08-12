@@ -1,372 +1,381 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>The iMediate Foundation</title>
-  <meta name="description" content="The iMediate Foundation supports parents with digital mediation tools and the .iM app—simplifying scheduling, improving communication, and centering children’s well-being." />
-  <link rel="canonical" href="https://imediate.im/" />
+  <link rel="stylesheet" href="styles.css" />
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="/styles.css" />
+    <!--  Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
 
-  <!-- Favicons (optional – replace with your files) -->
-  <!-- <link rel="icon" href="/favicon.ico"> -->
-  <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet" />
-
-  <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="The iMediate Foundation" />
-  <meta property="og:description" content="Digital tools that empower parents and simplify scheduling." />
-  <meta property="og:url" content="https://imediate.im/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://imediate.im/images/og.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Cookiebot -->
+  <!--  Cookiebot -->
   <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="e4272041-6ad9-47b8-9ad1-4f4021f729e7" type="text/javascript" async></script>
 
-  <!-- Hotjar Tracking Code -->
-  <script>
-    (function(h,o,t,j,a,r){
+  <!-- Hotjar Tracking Code for Site 6375615 (name missing) -->
+<script>
+  (function(h,o,t,j,a,r){
       h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
       h._hjSettings={hjid:6375615,hjsv:6};
       a=o.getElementsByTagName('head')[0];
       r=o.createElement('script');r.async=1;
       r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
       a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-  </script>
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  
+</script>
 
-  <!-- Google Tag Manager -->
-  <script>
-    (function(w,d,s,l,i){
-      w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
-      var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
-      j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl; f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-NKLWRHGR');
-  </script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NKLWRHGR');</script>
   <!-- End Google Tag Manager -->
 
-  <!-- GA4 (keep if you really want GA separate from GTM; otherwise load GA via GTM only) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2S6JBRMSCR"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-2S6JBRMSCR');
-  </script>
+  <!-- Smart App Banner for iMediate iOS App -->
+  <meta name="apple-itunes-app" content="app-id=6744072106, app-argument=https://imediate.com">
 
-  <!-- Smart App Banner for iOS -->
-  <meta name="apple-itunes-app" content="app-id=6744072106, app-argument=https://imediate.im/" />
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const appId = "6744072106";
+      const currentUrl = window.location.href;
+      const metaTag = document.createElement("meta");
+      metaTag.name = "apple-itunes-app";
+      metaTag.content = `app-id=${appId}, app-argument=${currentUrl}`;
+      document.head.appendChild(metaTag);
+    });
+  </script>  
+
 </head>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2S6JBRMSCR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2S6JBRMSCR');
+</script>
+
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKLWRHGR" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-  </noscript>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKLWRHGR"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <!-- HEADER -->
-  <header>
-    <div class="header-container" role="navigation" aria-label="Primary">
-      <a class="logo-link" href="/" aria-label="Go to homepage">
-        <h1 class="logo">.iM</h1>
-      </a>
-
-      <div class="language">
-        <a href="/nl/" class="flag-link" title="Switch to Dutch site" hreflang="nl" aria-label="Dutch">🇳🇱</a>
+<!-- HEADER (reuse from index.html if shared across pages) -->
+<header>
+  <a href="./index.html">
+  <div class="header-container">
+    <h1 class="logo">.iM</i></h1>
+   <div class="language">
+     <div>
+        <a href="./nl/index.html" class="flag-link" title="Switch to Dutch site">🇳🇱</a>  
       </div>
-
+  </a>
+          
       <nav class="nav">
-        <button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle menu">☰</button>
-        <ul id="primary-menu" class="menu-list">
-          <li><a href="/">Home</a></li>
-          <li class="has-submenu">
-            <button class="submenu-toggle" aria-expanded="false" aria-controls="app-submenu">The iM App ▾</button>
-            <ul id="app-submenu" class="submenu-list">
-              <li><a href="/aupair.html">for Au pairs &amp; Nannies</a></li>
-              <li><a href="/CoParent.html">for Co-Parents</a></li>
-              <li><a href="/ProParent.html">for Together Parents</a></li>
-              <li><a href="/SingleParent.html">for Single Parents</a></li>
-              <li><a href="/mediators.html">for Mediators</a></li>
-            </ul>
+       <div class="menu-toggle">☰</div>
+        <ul class="menu-list">
+          <li><a href="./index.html">Home</a></li>
+                    <li>
+              <a href="javascript:void(0)" class="submenu-toggle">The iM App  ▾ </a>
+              <ul class="submenu-list">
+                  <li><a href="./aupair.html">for Au pairs & Nannys</a></li>
+                  <li><a href="./CoParent.html">for Co-Parents</a></li>
+                  <li><a href="./ProParent.html">for Together Parents</a></li>
+                  <li><a href="./SingleParent.html">for Single Parents</a></li>
+                  <li><a href="./mediators.html">for Mediators</a></li>
+              </ul>
           </li>
-          <li><a href="/foundation.html">Foundation</a></li>
-          <li><a href="/about.html">About</a></li>
-          <li><a href="https://www.instagram.com/imediate_app/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="foundation.html">Foundation</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="https://www.instagram.com/imediate_app/">Instagram</a></li>
           <li><a href="#signup">Sign Up</a></li>
-          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="./contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
-  </header>
+  </div>
+</header>
 
-  <!-- HERO -->
+  <!-- HERO SECTION -->
   <section id="hero" class="hero-section">
+    <!-- new overlay text -->
     <div class="hero-top-message">
       <h1>The <i>iMediate</i> Foundation</h1>
-      <p><i>What is your situation?</i></p>
+      <i>What is your situation?</i>
     </div>
-
     <div class="overlay">
       <div class="hero-text">
-        <h2>Automated Child Scheduling</h2>
-        <p><i>The .iM App empowers parents &amp; simplifies scheduling.</i></p>
+        <h2>Autommted Child Scheduling</h2>
+        <p><i>The .iM App Empowers Parents & Simplifies Scheduling</i></p>
       </div>
     </div>
-
     <div class="hero-container">
-      <div class="hero-item" style="background-image: url(/images/ParentingTogether.jpg);" role="img" aria-label="Parents together">
+      <div class="hero-item" style="background-image: url(images/ParentingTogether.jpg);">
         <div class="hero-buttons">
-          <a href="/ProParent.html"><button class="cta" type="button">We Parent together</button></a>
+          <a href="./ProParent.html">
+            <button class="cta">We Parent together</button>
+          </a>
         </div>
         <div class="hero-content">
-          <h3>Parenting Together</h3>
-          <p>Stay organized and connected in your child’s day-to-day life.</p>
-          <a href="/ProParent.html"><button class="cta" type="button">Learn More</button></a>
+          <h1>Parenting Together</h1>
+          <h3>Stay organized and connected 
+            <br>in your child’s day-to-day life.</h3>
+          <a href="./ProParent.html">
+            <button class="cta">Learn More</button>
+          </a>
         </div>
       </div>
-
-      <div class="hero-item" style="background-image: url(/images/CoParenting.jpg);" role="img" aria-label="Co-parenting">
+      <div class="hero-item" style="background-image: url(images/CoParenting.jpg);">
         <div class="hero-buttons">
-          <a href="/CoParent.html"><button class="cta" type="button">We are Co-Parents</button></a>
+          <a href="./CoParent.html">
+            <button class="cta">We are Co-Parents</button>
+          </a>
         </div>
         <div class="hero-content">
-          <h3>Co-Parenting</h3>
-          <p>Reduce conflict. Create clarity. Build a healthy co-parenting rhythm.</p>
-          <a href="/CoParent.html"><button class="cta" type="button">Learn More</button></a>
+          <h1>Co-Parenting</h1>
+          <h3>Reduce conflict. Create clarity.
+            <br>Build a healthy co-parenting rhythm.</h3>
+          <a href="./CoParent.html">
+            <button class="cta">Learn More</button>
+          </a>
         </div>
       </div>
-
-      <div class="hero-item" style="background-image: url(/images/singleparent.jpg);" role="img" aria-label="Single parent">
+      <div class="hero-item" style="background-image: url(images/singleparent.jpg);">
         <div class="hero-buttons">
-          <a href="/SingleParent.html"><button class="cta" type="button">I am a Single Parent</button></a>
+          <a href="./SingleParent.html">
+            <button class="cta">I am a Single Parent</button>
+          </a>
         </div>
         <div class="hero-content">
-          <h3>Single Parents</h3>
-          <p>Support when you're doing it solo and a way to loop in your village.</p>
-          <a href="/SingleParent.html"><button class="cta" type="button">Learn More</button></a>
+          <h1>Single Parents</h1>
+          <h3>Support when you're doing it solo 
+            <br>and a way to loop in your village.</h3>
+          <a href="./SingleParent.html">
+            <button class="cta">Learn More</button>
+          </a>
         </div>
       </div>
     </div>
 
-    <div class="hero-callout" id="nanny-callout" style="text-align:left;">
-      <button class="close-callout" type="button" aria-label="Close callout" style="max-width:40px;">&times;</button>
-      <h2>Au Pair &amp; Nanny with .<i>iM</i></h2>
-      <p>Easily manage schedules, communication, and important information for your Au Pair or Nanny.</p>
-      <button type="button" onclick="window.location.href='/aupair.html'">Learn More</button>
-    </div>
+  <div class="hero-callout" id="nanny-callout" style="text-align: left;">
+    <button class="close-callout" style="max-width: 40px;">&times;</button>
+    <h2>Au Pair & Nanny with .<i>iM</i></h2>
+    <p>Easily manage schedules, communication, and important information for your Au Pair or Nanny.</p>
+    <button onclick="window.location.href='./aupair.html'">Learn More</button>
+  </div>
+
   </section>
+
+
 
   <!-- APP STORE DOWNLOAD -->
-  <section id="mission" class="page-break-section" style="background-color:#fff;">
+  <section id="mission" class="page-break-section" style="background-color: white;">
     <div class="split-text about-text visible">
-      <a href="https://apps.apple.com/us/app/imediate/id=6744072106?itscg=30200&itsct=apps_box_badge&mttnsubad=6744072106" style="display:inline-block;">
-        <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1746662400"
-             alt="Download the iMediate app on the App Store"
-             style="width:246px;height:82px;vertical-align:middle;object-fit:contain;" />
-      </a>
-    </div>
+      <a href="https://apps.apple.com/us/app/imediate/id6744072106?itscg=30200&itsct=apps_box_badge&mttnsubad=6744072106" style="display: inline-block;">
+        <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1746662400" alt="Download on the App Store" style="width: 246px; height: 82px; vertical-align: middle; object-fit: contain;" />
+        </a>
+        </div>
   </section>
+ 
+    
 
-  <!-- ALTERNATING SECTIONS -->
-  <section class="split-section reverse">
-    <div class="split-text about-text visible">
-      <h2>Smart Events &amp; Automated Extraction</h2>
-      <p>
-        Whether living together or apart, parents can use <i>.iM</i> to coordinate schedules, share updates, and
-        <strong>manage day-to-day</strong> responsibilities—all in one secure place.
-      </p>
-      <div class="cta-group">
-        <a href="/howdoesitwork.html" class="cta primary">See how it works!</a>
+    <!-- ALTERNATING SECTIONS -->
+    <section class="split-section reverse">
+      <div class="split-text about-text visible">
+        <h2>Smart Events & Automated Extraction</h2>
+        <p>
+          Whether living together or apart, parents can use <i>.iM</i> to coordinate schedules, share 
+          updates, and <b>manage day-to-day</b> responsibilities—all in one secure place. 
+        </p><br>
+        <div class="cta-group">
+          <a href="./howdoesitwork.html" class="cta primary">See how it works!</a>
+        </div>
       </div>
-    </div>
-    <div class="split-image" style="background-image:url('/images/HIW_10.jpg');" role="img" aria-label="How it works illustration"></div>
-  </section>
-
-  <section class="split-section">
-    <div class="split-text about-text visible">
-      <h2>Empowering Parents</h2>
-      <p>
-        Our goal is to <strong>support modern families</strong> with tools that build trust, reduce stress, and put
-        <strong>children’s well-being</strong> at the heart of every decision.
-      </p>
-      <div class="cta-group">
-        <a href="/about.html" class="cta secondary">Read our Origins Comic</a>
+      <div class="split-image" style="background-image: url('images/HIW_10.jpg');"></div>
+    </section>
+    
+    <section class="split-section">
+      <div class="split-text about-text visible">
+        <h2>Empowering Parents</h2>
+        <p>
+          Our goal is to <b>support modern families</b> with tools
+          that build trust, reduce stress, and put <b>children’s well-being</b> at the 
+          heart of every decision.
+          </p><br>
+          <div class="cta-group">
+            <a href="./about.html" class="cta secondary">Read our Origins Comic</a>
+          </div>
       </div>
-    </div>
-    <div class="split-image" style="background-image:url('/images/HIW_2.jpg');" role="img" aria-label="Parents using tools"></div>
-  </section>
-
-  <section class="split-section reverse">
-    <div class="split-text about-text visible">
-      <h2>Made for Parents, by Parents</h2>
-      <p>
-        By reducing miscommunication and <strong>making planning easier</strong>, the <i>.iM</i> app helps create calmer routines,
-        stronger collaboration, and more time for quality moments with your kids.
-      </p>
-      <div class="cta-group">
-        <a href="#signup" class="cta primary">Join the waitlist!</a>
+      <div class="split-image" style="background-image: url('images/HIW_2.jpg');"></div>
+    </section>
+    
+    <section class="split-section reverse">
+      <div class="split-text about-text visible">
+        <h2>Made for Parents, by Parents</h2>
+        <p>
+          By reducing miscommunication and <b>making planning easier</b>, using the <i>.iM</i> app 
+          helps create calmer routines, stronger collaboration, and more time for quality 
+          moments with your kids. 
+        </p><br>
+        <div class="cta-group">
+          <a href="#signup" class="cta primary">Join the waitlist! </a>
+        </div>
       </div>
-    </div>
-    <div class="split-image" style="background-image:url('/images/HappyFamily.jpg');" role="img" aria-label="Happy family"></div>
-  </section>
+      <div class="split-image" style="background-image: url('images/HappyFamily.jpg');"></div>
+    </section>
 
-  <section class="split-section" id="about">
-    <div class="split-text about-text visible">
-      <h2>What is The <i>iMediate</i> Foundation?</h2>
-      <p>
-        The iMediate Foundation campaigns for the inclusion of digital mediation tools, like iMediate, as part of the legal process—supporting families with tools and resources to empower parents and simplify scheduling.
-      </p>
-      <div class="cta-group">
-        <a href="/foundation.html" class="cta secondary">The Foundation</a>
+        <section class="split-section" id="about">
+      <div class="split-text about-text visible">
+        <h2>Whats is The <i>iMediate</i> Foundation?</h2>
+        <p>
+          The iMediate foundation campaigns for the inclusion of digital 
+          mediation tools, like iMediate, as part of the legal process, 
+          supporting families with tools 
+          and resources to empower parents and simplify scheduling. 
+        </p><br>
+        <div class="cta-group">
+          <a href="./foundation.html" class="cta secondary">The Foundation</a>
+        </div>
       </div>
-    </div>
-    <div class="split-image" style="background-image:url('/images/about.jpg');" role="img" aria-label="About the foundation"></div>
-  </section>
+      <div class="split-image" style="background-image: url('images/about.jpg');"></div>
+    </section>
 
-  <!-- FEATURES -->
-  <section class="features-section">
-    <h2>Why People Love The <i>.iM</i> App</h2>
-    <ul class="features-list">
-      <li>
-        <img src="/images/All-in-One Co-Parenting Hub.jpg" alt="All-in-one co-parenting hub" class="feature-icon" />
-        <strong>All-in-One Co-Parenting Hub</strong>
-        <p>iMediate brings calendars, messages, agreements, and reminders into one shared space, so both parents stay on the same page.</p>
-      </li>
-      <li>
-        <img src="/images/Smart Shared Scheduling.jpg" alt="Smart shared scheduling" class="feature-icon" />
-        <strong>Smart Shared Scheduling</strong>
-        <p>Coordinate drop-offs, holidays, and events with clarity. Calendar entries are structured and logged, ready for reference or documentation.</p>
-      </li>
-      <li>
-        <img src="/images/Organized Communication.jpg" alt="Organized communication" class="feature-icon" />
-        <strong>Organized Communication</strong>
-        <p>Keep all co-parenting messages in one place, separate from personal texts. iMediate makes it easy to track agreements and reduce conflict.</p>
-      </li>
-      <li>
-        <img src="/images/Built for Legal Peace of Mind.jpg" alt="Legal peace of mind" class="feature-icon" />
-        <strong>Built for Legal Peace of Mind</strong>
-        <p>Every interaction can be turned into court-ready documentation, ideal for family law cases, mediation, or simply staying accountable.</p>
-      </li>
-      <li>
-        <img src="/images/Seamless Intg.jpg" alt="Seamless integrations" class="feature-icon" />
-        <strong>Seamless Integration</strong>
-        <p>iMediate works alongside your existing tools like Google Calendar and Outlook, syncing events and details automatically.</p>
-      </li>
-      <li>
-        <img src="/images/devices.jpg" alt="Works across devices" class="feature-icon" />
-        <strong>Works Across Devices</strong>
-        <p>Access iMediate anytime from your phone or desktop—everything stays synced and secure.</p>
-      </li>
-      <li>
-        <img src="/images/Shared Access Permissions.jpg" alt="Shared access and permissions" class="feature-icon" />
-        <strong>Shared Access &amp; Permissions</strong>
-        <p>Grant access to professionals (like mediators or lawyers) or caregivers when needed, with full control over who sees what.</p>
-      </li>
-      <li>
-        <img src="/images/ShieldList.jpg" alt="Shield keeps conversations calm" class="feature-icon" />
-        <strong>Shield<i>.im</i></strong>
-        <p>Shield keeps conversations calm and child-focused. It gives real-time guidance, so communication stays on track and centered on your kids.</p>
-      </li>
-      <li>
-        <img src="/images/foundationicon.jpg" alt="The iMediate Foundation" class="feature-icon" />
-        <strong>The <i>iMediate</i> Foundation</strong>
-        <p>Free or subsidized app access, personalized onboarding, and expert-led workshops to learn the power of iMediate.</p>
-      </li>
-    </ul>
 
+<!-- FEATURES SECTION -->
+<section class="features-section">
+  <h2>Why People Love The <i>.iM</i> App</h2>
+  <ul class="features-list">
+    <li>
+      <img src="images/All-in-One Co-Parenting Hub.jpg" alt="Parent Hub" class="feature-icon" />
+      <strong>All-in-One Co-Parenting Hub</strong>
+      <p>iMediate brings calendars, messages, agreements, and reminders into one shared space, so both parents stay on the same page.</p>
+    </li>
+    <li>
+      <img src="images/Smart Shared Scheduling.jpg" alt="Smart Events" class="feature-icon" />
+      <strong>Smart Shared Scheduling</strong>
+      <p>Coordinate drop-offs, holidays, and events with clarity. Calendar entries are structured and logged, ready for reference or documentation.</p>
+    </li>
+    <li>
+      <img src="images/Organized Communication.jpg" alt="Organized Communication" class="feature-icon" />
+      <strong>Organized Communication</strong>
+      <p>Keep all co-parenting messages in one place, separate from personal texts. iMediate makes it easy to track agreements and reduce conflict.</p>
+    </li>
+    <li>
+      <img src="images/Built for Legal Peace of Mind.jpg" alt="Court Ready" class="feature-icon" />
+      <strong>Built for Legal Peace of Mind</strong>
+      <p>Every interaction can be turned into court-ready documentation, ideal for family law cases, mediation, or simply staying accountable.</p>
+    </li>
+    <li>
+      <img src="images/Seamless Intg.jpg" alt="Seamless" class="feature-icon" />
+      <strong>Seamless Integration</strong>
+      <p>iMediate works alongside your existing tools like Google Calendar and Outlook, syncing events and details automatically.</p>
+    </li>
+    <li>
+      <img src="images/devices.jpg" alt="All Devices" class="feature-icon" />
+      <strong>Works Across Devices</strong>
+      <p>Access iMediate anytime from your phone or desktop, everything stays synced and secure.</p>
+    </li>
+    <li>
+      <img src="images/Shared Access Permissions.jpg" alt="Shared Access" class="feature-icon" />
+      <strong>Shared Access & Permissions</strong>
+      <p>Grant access to professionals (like mediators or lawyers) or caregivers when needed, with full control over who sees what.</p>
+    </li>
+    <li>
+      <img src="images/ShieldList.jpg" alt="Shield" class="feature-icon" />
+      <strong>Sheild<i>.im</i></strong>
+      <p>Shield keeps conversations calm and child-focused. It gives real-time guidance, so communication stays on track and centered on your kids.</p>
+    </li>
+    <li>
+      <img src="images/foundationicon.jpg" alt="Foundation" class="feature-icon" />
+      <strong>The <i>iMediate</i> Foundation</strong>
+      <p>Free or subsidized app access, personalized onboarding, and expert-led workshops to learn the power of iMediate.</p>
+    </li>
     <div class="cta-group">
-      <a href="/foundation.html" class="cta secondary">The Foundation</a>
+      <a href="./foundation.html" class="cta secondary">The Foundation</a>
     </div>
     <div class="cta-group">
-      <a href="/howdoesitwork.html" class="cta primary">See how it works!</a>
+      <a href="./howdoesitwork.html" class="cta primary">See how it works!</a>
     </div>
     <div class="cta-group">
-      <a href="/about.html" class="cta secondary">Origins of .iM</a>
+      <a href="./about.html" class="cta secondary">Origins of .iM</a>
     </div>
-  </section>
+  </ul>
+</section>
 
-  <!-- INSTAGRAM -->
+  
+
+  <!-- INSTAGRAM SECTION -->
   <section id="instagram" class="instagram-section">
     <div class="insta-text">
       <h2>Our Instagram</h2>
       <div class="body-text">
         <p>Connect with our community</p>
       </div>
-    </div>
+   </div>
     <div class="insta-feed">
-      <blockquote class="instagram-media"
-        data-instgrm-captioned
-        data-instgrm-permalink="https://www.instagram.com/p/DIQ_uG2IUZz/?utm_source=ig_embed&amp;utm_campaign=loading"
-        data-instgrm-version="14"
-        style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,.5),0 1px 10px 0 rgba(0,0,0,.15);margin:1px;max-width:540px;min-width:326px;padding:0;width:99.375%;">
-      </blockquote>
-      <script async src="https://www.instagram.com/embed.js"></script>
+      <!-- Placeholder for Instagram embed -->
+     <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DIQ_uG2IUZz/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/DIQ_uG2IUZz/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/DIQ_uG2IUZz/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by iMediate (@imediate_app)</a></p></div></blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
     </div>
   </section>
 
-  <!-- SIGN-UP -->
-  <section id="signup" class="signup-section" aria-label="Sign up form">
+  <!-- SIGN-UP SECTION -->
+  <section id="signup" class="signup-section">
     <div class="signup-container">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdZ_rHd1v8etyBcD_9t9M4MQhVRg3pAPbRkrZquIcMxmU3CBA/viewform?embedded=true"
-              width="340" height="760" frameborder="0" marginheight="0" marginwidth="0"
-              title="Join the iMediate waitlist">Loading…</iframe>
-    </div>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdZ_rHd1v8etyBcD_9t9M4MQhVRg3pAPbRkrZquIcMxmU3CBA/viewform?embedded=true" width="340" height="760" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>    </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-content">
+      <!-- Left Column: Values -->
       <div class="footer-left">
         <div class="values">
           <h2>Our Values</h2>
           <ul>
             <li><strong>Clarity</strong> <p>We make complex situations simple and understandable.</p></li>
             <li><strong>Empathy</strong> <p>We see parents as people first. Always reflect the human connection.</p></li>
-            <li><strong>Neutrality</strong> <p>We’re never on one parent’s side. We work with both in balance.</p></li>
+            <li><strong>Neutrality</strong> <p>We’re never on “one parent’s side.” Work with both in balance.</p></li>
             <li><strong>Empowerment</strong> <p>Be encouraging, never condescending.</p></li>
-            <li><strong>Structure + Support</strong> <p>Communication, organization, and peace of mind.</p></li>
+            <li><strong>Structure + Support</strong> <p>Communication, organization and peace of mind.</p></li>
           </ul>
         </div>
       </div>
-
+  
+      <!-- Right Column: Logo + Links -->
       <div class="footer-right">
-        <h2 class="logo"><i>The iMediate Foundation</i></h2>
+        <h1 class="logo"><i>The iMediate Foundation</i></h1>
         <div class="footer-links">
-          <a href="/privacy.html">Privacy Policy</a>
-          <a href="/terms.html">Terms of Use</a>
-          <a href="/contact.html">Contact</a>
+          <a href="./privacy.html">Privacy Policy</a>
+          <a href="./terms.html">Terms of Use</a>
+          <a href="./contact.html">Contact</a>
         </div>
       </div>
     </div>
-
+  
     <div class="footer-bottom">
       &copy; <span id="year"></span> The iMediate Foundation. All rights reserved.
     </div>
   </footer>
 
-  <!-- Locale popup -->
-  <div id="locale-popup" class="locale-popup hidden" role="dialog" aria-modal="true" aria-labelledby="locale-heading">
+  <script src="script.js"></script>
+
+  <div id="locale-popup" class="locale-popup hidden">
     <div class="popup-content">
-      <p id="locale-heading">🇳🇱 In Nederland? Overschakelen naar de Nederlandse versie van onze site?</p>
-      <button id="switch-dutch" type="button" onclick="window.location.href='/nl/'">Ja, Nederlands 🇳🇱!</button>
-      <button id="dismiss-popup" type="button">No thanks</button>
+      <p>🇳🇱 In Nederland? Overschakelen naar de Nederlandse versie van onze site?</p>
+      <button id="switch-dutch">Ja, Nederlands 🇳🇱!</button>
+      <button id="dismiss-popup">No thanks</button>
     </div>
   </div>
-
-  <!-- Scripts -->
-  <script src="/script.js" defer></script>
-  <script>
-    // Set footer year
-    (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
-  </script>
+  
 </body>
 </html>
