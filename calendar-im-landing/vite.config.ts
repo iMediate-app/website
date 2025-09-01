@@ -1,11 +1,14 @@
 // vite.config.ts
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import path from 'path'
+
 
 export default defineConfig({
   plugins: [react()],
-  resolve: { alias: { '@': path.resolve(__dirname, './src') } },
-  // 👇 replace with your repo name
-  base: '/calendar-im-landing/',
-})
+  resolve: { alias: { '@': '/src' } },
+  base: '/',
+  build: {
+    outDir: '.', // Output build files to project root
+    emptyOutDir: false, // Do not delete everything in root
+  },
+});
