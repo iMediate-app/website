@@ -1,14 +1,28 @@
 
-// scroll fix
-document.addEventListener("DOMContentLoaded", function() {
-    document.body.style.height = `${document.body.scrollHeight + 120}px`;
-});
+// remove legacy scroll height hack
 
-// MOBILE MENU TOGGLE
+// MOBILE MENU TOGGLE (accessible)
 const toggleBtn = document.querySelector('.menu-toggle');
 const menuList = document.querySelector('.menu-list');
-toggleBtn.addEventListener('click', () => {
-  menuList.classList.toggle('open');
+const navOverlay = document.querySelector('.nav-overlay');
+
+function setMenuOpen(isOpen) {
+  if (!toggleBtn || !menuList) return;
+  toggleBtn.setAttribute('aria-expanded', String(isOpen));
+  menuList.classList.toggle('open', isOpen);
+  if (navOverlay) navOverlay.hidden = !isOpen;
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+}
+
+toggleBtn?.addEventListener('click', () => {
+  const isOpen = menuList.classList.contains('open');
+  setMenuOpen(!isOpen);
+});
+
+navOverlay?.addEventListener('click', () => setMenuOpen(false));
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') setMenuOpen(false);
 });
 
 //  MENU DROPDOWN
@@ -142,8 +156,10 @@ document.getElementById("year").textContent = new Date().getFullYear();
   });
 
 
-  // Initialize AOS (Animate On Scroll)
-AOS.init({
-  once: true,
-  duration: 600
-});
+  // Initialize AOS (Animate On Scroll) only if available
+  if (window.AOS && typeof AOS.init === 'function') {
+    AOS.init({
+      once: true,
+      duration: 600
+    });
+  }
