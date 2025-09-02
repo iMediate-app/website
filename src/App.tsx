@@ -130,7 +130,7 @@ export default function App() {
         </motion.div>
         <div className="flex justify-center items-center">
           <img
-            src="/family/images/hiw_10.jpg"
+            src="https://imediate-app.github.io/website/family/images/hiw_10.jpg"
             alt="How it works preview"
             className="rounded-3xl border border-neutral-200 bg-white shadow-xl max-w-full h-auto"
           />
