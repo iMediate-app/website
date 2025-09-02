@@ -111,7 +111,7 @@
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
             <div className="rounded-3xl bg-gradient-to-tr from-sky-100 to-indigo-100 dark:from-slate-800 dark:to-slate-700 h-80 flex items-center justify-center shadow-inner relative overflow-hidden">
               <img
-                src="https://imediate-app.github.io/website/images/HIW_10.jpg"
+                src="/website/family/images/HIW_10.jpg"
                 alt="People, pets, and projects connected"
                 className="object-cover w-full h-full absolute inset-0 opacity-90"
                 style={{ objectPosition: 'center' }}
@@ -163,7 +163,7 @@
             <div className="flex flex-col md:flex-row gap-4 items-center">
               <div className="w-40 h-72 bg-white dark:bg-slate-800 rounded-2xl shadow-lg flex items-center justify-center border border-slate-100 dark:border-slate-700 overflow-hidden">
                 <img
-                  src="https://imediate-app.github.io/website/images/HIW_7.jpg"
+                  src="/website/family/images/HIW_7.jpg"
                   alt="Mobile Calendar Preview 1"
                   className="object-cover w-full h-full"
                   style={{ objectPosition: 'top center' }}
@@ -171,7 +171,7 @@
               </div>
               <div className="w-40 h-72 bg-white dark:bg-slate-800 rounded-2xl shadow-lg flex items-center justify-center border border-slate-100 dark:border-slate-700 overflow-hidden">
                 <img
-                  src="https://imediate-app.github.io/website/images/HIW_2.jpg"
+                  src="/website/family/images/HIW_2.jpg"
                   alt="Mobile Calendar Preview 2"
                   className="object-cover w-full h-full"
                   style={{ objectPosition: 'top center' }}
@@ -179,7 +179,7 @@
               </div>
               <div className="w-40 h-72 bg-white dark:bg-slate-800 rounded-2xl shadow-lg flex items-center justify-center border border-slate-100 dark:border-slate-700 overflow-hidden">
                 <img
-                  src="https://imediate-app.github.io/website/images/HIW_3.jpg"
+                  src="/website/family/images/HIW_3.jpg"
                   alt="Mobile Calendar Preview 3"
                   className="object-cover w-full h-full"
                   style={{ objectPosition: 'top center' }}
@@ -198,7 +198,7 @@
       {/* Horizontally Scrolling Section */}
       <section className="py-16 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-950 border-t border-slate-100 dark:border-slate-800">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-8 text-center">Explore More</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">iM Unique Smart Events</h2>
           <div className="overflow-x-auto">
             <div className="flex gap-8 min-w-[1800px] md:min-w-[2400px] pb-2" style={{scrollbarWidth:'thin'}}>
               <div className="flex-shrink-0 w-80 h-96 rounded-3xl bg-white dark:bg-slate-800 shadow-lg border border-slate-100 dark:border-slate-700 flex flex-col items-center justify-center text-center p-8">
@@ -272,6 +272,28 @@
         </div>
       </motion.section>
 
+      {/* Foundation Promo Section */}
+      <section className="py-16 bg-gradient-to-br from-indigo-50 via-white to-sky-50 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 border-t border-slate-100 dark:border-slate-800">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+          <div className="flex justify-center">
+            <img
+              src="/website/family/images/foundationicon.jpg"
+              alt="The iMediate Foundation"
+              className="rounded-3xl shadow-lg w-72 h-72 object-cover object-center bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700"
+            />
+          </div>
+          <div>
+            <h2 className="text-3xl font-bold mb-4">Free for People, Powered by Purpose</h2>
+            <p className="text-lg text-slate-700 dark:text-slate-300 mb-6">
+              The calendar.iM app is free for everyone, made possible by the support of The iMediate Foundation. Our mission is to empower families and communities with tools for clarity, calm, and connection. Revenue from the app helps fund our foundation's work—so every download makes a difference.
+            </p>
+            <a href="https://imediate.im/foundation" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="rounded-2xl">Learn more about The iMediate Foundation</Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Footer Banner CTA */}
       <footer className="mt-16 border-t border-slate-100 dark:border-slate-800 bg-gradient-to-r from-sky-50 to-indigo-50 dark:from-slate-950 dark:to-slate-900 py-12">
         <div className="mx-auto max-w-4xl px-4 flex flex-col items-center text-center gap-6">
@@ -301,50 +323,3 @@
     </div>
   );
 }
-
-  {/* Features Section */}
-  <section id="features" className="py-16 bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800">
-    <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-      <h2 className="text-3xl font-bold mb-8 text-center">Why calendar.iM?</h2>
-      <div className="grid md:grid-cols-3 gap-8">
-        <Card>
-          <CardHeader>
-            <CardTitle>Privacy First</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <ShieldCheck className="h-8 w-8 mb-2 text-sky-500" />
-            <p>Your data stays yours. We never sell or share your information.</p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader>
-            <CardTitle>For Everyone</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <Users className="h-8 w-8 mb-2 text-sky-500" />
-            <p>Perfect for families, teams, and individuals to stay organized together.</p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader>
-            <CardTitle>Wellbeing Focused</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <Heart className="h-8 w-8 mb-2 text-sky-500" />
-            <p>Designed to help you find balance, not just productivity.</p>
-          </CardContent>
-        </Card>
-      </div>
-    </div>
-  </section>
-
-  {/* Footer */}
-  <footer className="mt-16 border-t border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-950 py-8">
-    <div className="mx-auto max-w-7xl px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-500 dark:text-slate-400">
-      <div>&copy; {new Date().getFullYear()} calendar.iM. All rights reserved.</div>
-      <div className="flex gap-4">
-        <a href="mailto:hello@imediate.im" className="hover:text-sky-600 dark:hover:text-sky-400">Contact</a>
-        <a href="https://imediate.im" target="_blank" rel="noopener noreferrer" className="hover:text-sky-600 dark:hover:text-sky-400">About</a>
-      </div>
-    </div>
-  </footer>
