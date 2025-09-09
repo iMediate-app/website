@@ -14,7 +14,38 @@ import {
   PawPrint,
   Lightbulb,
   Heart,
+  Instagram,
+  Linkedin,
+  MessageSquareText,
+  Plug,
+  CheckCircle2,
+  PlusCircle,
+  Shield,
+  CalendarPlus,
+  Images,
+  XCircle,
 } from "lucide-react";
+
+// StepCard component for How It Works section
+function StepCard({ icon, title, text }: { icon: React.ReactNode; title: string; text: React.ReactNode }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 8 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4 }}
+      className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm"
+    >
+      <div className="mb-4 flex items-center gap-3">
+        <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-100 to-sky-100">
+          {icon}
+        </div>
+        <h3 className="text-lg font-semibold">{title}</h3>
+      </div>
+      <p className="text-gray-700 leading-relaxed">{text}</p>
+    </motion.div>
+  );
+}
 
 const fadeUp = {
   hidden: { opacity: 0, y: 16 },
@@ -22,6 +53,7 @@ const fadeUp = {
 };
 
 export default function App() {
+  const [showCantSay, setShowCantSay] = React.useState(false);
   return (
     <div className="min-h-screen bg-neutral-50 text-neutral-900">
       {/* Background Illustration */}
@@ -64,29 +96,6 @@ export default function App() {
         </svg>
       </div>
 
-      {/* Header */}
-      <header className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-        <div className="flex items-center gap-2">
-          <a href="https://imediate.im" target="_blank" rel="noopener noreferrer" aria-label="iMediate Home" className="flex items-center">
-            <span className="inline-block h-8 w-8 rounded-xl overflow-hidden">
-              {/* SVG Logo */}
-              <svg version="1.1" viewBox="0 0 2048 2048" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
-                <path transform="translate(0)" d="m0 0h2048v2048h-2048z" fill="#101010"/>
-                <path transform="translate(791,652)" d="m0 0h251l2 2 16 84 24 125 25 131 15 77 13 69 8 42 4 25 3 28 1 18v33l-1 14-1 4 4-1 13-37 12-29 8-19 7-15 16-33 193-386 9-19 10-19 15-30 9-19 18-36 6-9h256l2 3 3 30v10l-10 4-94 27-2 1-19 120-16 100-14 88-17 106-9 57-20 126-7 42v3l33 11 41 13 21 7 1 3-12 29-4 10-2 2h-308l-1-2-2-29v-12l7-3 43-13 50-15h3l6-37 15-92 19-118 18-112 20-122 12-65 17-83 1-4-5 2-11 28-15 36-11 25-12 27-15 32-11 24-10 19-23 45-14 27-17 33-10 19-15 29-17 33-10 19-21 41-10 19-18 35-10 19-18 35-10 19-20 39-10 19-12 23-17 33-10 19-5 8h-64l-3-9-22-107-24-116-28-135-24-117-12-58-10-57-8-55-5-39-1-14-4 1-5 42-6 52-10 72-13 81-22 140-15 94-16 102-7 43v5l36 12 53 17 6 3-1 5-15 37-1 1h-258l-2-5-2-38 7-3 70-21 26-8 4-20 10-64 27-169 14-88 13-82 11-70 24-150-11-3-36-12-46-15 1-7 10-27 4-9z" fill="#FFFFFF"/>
-                <path transform="translate(447,851)" d="m0 0h33l19 3 15 5 13 7 12 11 6 7 8 16 4 15 2 18v13l-5 38-17 97-14 82-32 184-3 17v6l8 2 10 1h13l17-3 16-6 18-10 14-11 7-6 2-3 5 1 18 18-2 6-7 16-10 17-10 13-11 12-8 8-15 11-16 9-15 6-17 5-17 3-12 1h-21l-21-3-17-5-14-7-9-7-7-7-7-10-7-17-3-13-1-9v-23l4-32 21-122 13-74 28-161 5-29v-3l-16-3h-15l-16 3-13 5-14 7-16 12-10 9-5 4-2-1v-2h-2l-16-16 1-6 7-16 11-18 10-13 19-19 17-12 16-8 12-5 19-5z" fill="#FFFFFF"/>
-                <path transform="translate(519,588)" d="m0 0h20l15 3 12 5 11 6 11 9 7 8 9 14 6 16 2 9v26l-5 18-8 16-11 13-8 7-14 8-13 5-13 3h-21l-17-4-16-7-13-10-8-8-7-10-7-14-4-14-1-6v-20l4-17 7-16 10-13 10-10 13-8 12-5z" fill="#FFFFFF"/>
-              </svg>
-            </span>
-          </a>
-          <span className="font-semibold tracking-tight ml-2">calendar.iM</span>
-        </div>
-        <a
-          href="#download"
-          className="rounded-xl bg-neutral-900 px-4 py-2 text-sm font-medium text-white shadow-sm transition hover:shadow-md"
-        >
-          Get the free app
-        </a>
-      </header>
 
       {/* Hero */}
       <section className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 py-10 md:grid-cols-2 md:py-20">
@@ -97,35 +106,37 @@ export default function App() {
           <p className="mt-4 max-w-xl text-lg text-neutral-700">
             A simple way to organize and share what matters most.
           </p>
-          <div className="mt-8 flex flex-col sm:flex-row flex-wrap items-center gap-3 w-full">
+          <div className="mt-8 flex flex-col sm:flex-row flex-wrap items-start gap-3 w-full justify-start">
             <a
               href="https://api.whatsapp.com/send/?phone=%2B31613070691&text=I%27m+saying+hello+to+iMediate%27s+Automagic%21&type=phone_number&app_absent=0"
               target="_blank" rel="noopener noreferrer"
-              className="w-full sm:w-auto rounded-2xl bg-emerald-600 px-5 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-emerald-700 hover:shadow-md flex items-center gap-2 justify-center"
+              className="w-full sm:w-auto rounded-2xl bg-emerald-600 px-5 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-emerald-700 hover:shadow-md flex items-center gap-2 justify-start"
             >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20" fill="currentColor" className="text-white"><path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.832 4.584 2.236 6.37L4 29l7.824-2.18C13.5 27.606 14.734 28 16 28c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 22c-1.13 0-2.244-.188-3.293-.558l-.235-.08-4.646 1.294 1.294-4.646-.08-.235C6.188 17.244 6 16.13 6 15c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10zm5.29-7.709c-.293-.146-1.73-.855-1.997-.951-.267-.098-.461-.146-.656.146-.195.293-.752.951-.922 1.146-.17.195-.341.219-.634.073-.293-.146-1.236-.455-2.357-1.451-.87-.776-1.457-1.732-1.63-2.025-.17-.293-.018-.45.128-.595.132-.132.293-.341.439-.512.146-.17.195-.293.293-.488.098-.195.049-.366-.024-.512-.073-.146-.656-1.586-.899-2.172-.237-.57-.478-.492-.656-.5-.17-.007-.366-.009-.561-.009-.195 0-.512.073-.78.366-.267.293-1.02.996-1.02 2.427 0 1.43 1.04 2.812 1.186 3.007.146.195 2.048 3.13 5.07 4.267.709.244 1.262.39 1.694.499.712.181 1.36.156 1.872.095.571-.067 1.73-.707 1.976-1.39.244-.683.244-1.268.171-1.39-.073-.122-.268-.195-.561-.341z"/></svg>
-              Start with calendar.iM
+              Say hello to calendar.iM
             </a>
-            <a
-              href="https://apps.apple.com/app/imediate/id6744072106"
-              target="_blank"
-              rel="noreferrer"
-              className="w-full sm:w-auto inline-flex items-center gap-2 rounded-2xl border border-neutral-200 bg-white px-4 py-3 text-sm font-medium shadow-sm transition hover:shadow-md justify-center"
-              aria-label="Download on the App Store"
-            >
-              <Apple className="h-5 w-5" />
-              <span>App Store</span>
-            </a>
-            <a
-              href="https://play.google.com/store/apps/details?id=com.imediate"
-              target="_blank"
-              rel="noreferrer"
-              className="w-full sm:w-auto inline-flex items-center gap-2 rounded-2xl border border-neutral-200 bg-white px-4 py-3 text-sm font-medium shadow-sm transition hover:shadow-md justify-center"
-              aria-label="Get it on Google Play"
-            >
-              <PlayCircle className="h-5 w-5" />
-              <span>Google Play</span>
-            </a>
+            <div className="w-full sm:w-auto flex flex-col sm:flex-row gap-3 justify-center">
+              <a
+                href="https://apps.apple.com/app/imediate/id6744072106"
+                target="_blank"
+                rel="noreferrer"
+                className="w-full sm:w-auto inline-flex items-center gap-2 rounded-2xl border border-neutral-200 bg-white px-4 py-3 text-sm font-medium shadow-sm transition hover:shadow-md justify-start"
+                aria-label="Download on the App Store"
+              >
+                <Apple className="h-5 w-5" />
+                <span>App Store</span>
+              </a>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.imediate"
+                target="_blank"
+                rel="noreferrer"
+                className="w-full sm:w-auto inline-flex items-center gap-2 rounded-2xl border border-neutral-200 bg-white px-4 py-3 text-sm font-medium shadow-sm transition hover:shadow-md justify-start"
+                aria-label="Get it on Google Play"
+              >
+                <PlayCircle className="h-5 w-5" />
+                <span>Google Play</span>
+              </a>
+            </div>
           </div>
         </motion.div>
         <div className="flex justify-center items-center">
@@ -222,6 +233,374 @@ export default function App() {
         </div>
       </section>
 
+      {/* About Section */}
+  <section id="about" className="mx-auto max-w-7xl px-6 py-16">
+        <h2 className="text-4xl font-bold tracking-tight mb-2 mt-16 text-center">About Us</h2>
+        <p className="text-xl text-neutral-700 mb-8 text-center">We are an Amsterdam based bootstrapped start-up. We are clear, calm, and connected. We are calendar.iM.</p>
+        <div className="rounded-3xl bg-white p-8 shadow-sm">
+          <h4 className="text-2xl font-semibold tracking-tight mb-8 mt-8 text-left w-full">Meet the Team</h4>
+          <div className="flex flex-col md:flex-row gap-8 items-stretch">
+            {/* Team grid */}
+            <div className="flex-1 flex flex-col gap-6 justify-center">
+              <div className="grid grid-cols-1 gap-6">
+                <div className="flex items-center gap-4 rounded-2xl border border-neutral-200 bg-neutral-50 p-4 shadow-sm">
+                  <img
+                    src="images/thomas.jpg"
+                    alt="TD, Founder"
+                    className="max-w-[100px] max-h-[100px] w-full h-auto aspect-square object-cover rounded-2xl border border-neutral-200 bg-white shadow"
+                  />
+                  <div className="flex-1">
+                    <div className="font-bold">TD, Founder</div>
+                    <div className="text-neutral-700 text-sm">Idea machine. Sees the matrix.</div>
+                    <div className="flex gap-2 mt-2">
+                      <a href="https://www.instagram.com/tdr1chardson" aria-label="TD Instagram" className="text-neutral-400 hover:text-emerald-600"><Instagram className="h-5 w-5" /></a>
+                      <a href="https://www.linkedin.com/in/bringingpeopletogether/" aria-label="TD LinkedIn" className="text-neutral-400 hover:text-emerald-600"><Linkedin className="h-5 w-5" /></a>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4 rounded-2xl border border-neutral-200 bg-neutral-50 p-4 shadow-sm">
+                  <img
+                    src="images/drue.jpg"
+                    alt="Drue, Co-Founder"
+                    className="max-w-[100px] max-h-[100px] w-full h-auto aspect-square object-cover rounded-2xl border border-neutral-200 bg-white shadow"
+                  />
+                  <div className="flex-1">
+                    <div className="font-bold">Drue, Co-Founder</div>
+                    <div className="text-neutral-700 text-sm">In-house hippy. Keeps us grounded.</div>
+                    <div className="flex gap-2 mt-2">
+                      <a href="https://www.instagram.com/druebird_/" aria-label="Drue Instagram" className="text-neutral-400 hover:text-emerald-600"><Instagram className="h-5 w-5" /></a>
+                      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" aria-label="Drue LinkedIn" className="text-neutral-400 hover:text-emerald-600"><Linkedin className="h-5 w-5" /></a>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4 rounded-2xl border border-neutral-200 bg-neutral-50 p-4 shadow-sm">
+                  <img
+                    src="images/cedric.jpg"
+                    alt="Cedric, Web Guy"
+                    className="max-w-[100px] max-h-[100px] w-full h-auto aspect-square object-cover rounded-2xl border border-neutral-200 bg-white shadow"
+                  />
+                  <div className="flex-1">
+                    <div className="font-bold">Cedric, Web Guy</div>
+                    <div className="text-neutral-700 text-sm">Delivering efficiency, changing lives.</div>
+                    <div className="flex gap-2 mt-2">
+                      <a href="https://www.instagram.com/zaetrik/" aria-label="Cedric Instagram" className="text-neutral-400 hover:text-emerald-600"><Instagram className="h-5 w-5" /></a>
+                      <a href="https://www.linkedin.com/in/cedric-dose/" aria-label="Cedric LinkedIn" className="text-neutral-400 hover:text-emerald-600"><Linkedin className="h-5 w-5" /></a>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4 rounded-2xl border border-neutral-200 bg-neutral-50 p-4 shadow-sm">
+                  <img
+                    src="images/rody.jpg"
+                    alt="Rody, The App Dev"
+                    className="max-w-[100px] max-h-[100px] w-full h-auto aspect-square object-cover rounded-2xl border border-neutral-200 bg-white shadow"
+                  />
+                  <div className="flex-1">
+                    <div className="font-bold">Rody, The App Dev</div>
+                    <div className="text-neutral-700 text-sm">Makes it all happen (between breaks).</div>
+                    <div className="flex gap-2 mt-2">
+                      <a href="https://www.instagram.com/rodyyaacoub/" aria-label="Rody Instagram" className="text-neutral-400 hover:text-emerald-600"><Instagram className="h-5 w-5" /></a>
+                      <a href="https://www.linkedin.com/in/rody-yaacoub/" aria-label="Rody LinkedIn" className="text-neutral-400 hover:text-emerald-600"><Linkedin className="h-5 w-5" /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* About/mission content */}
+            <div className="flex-1 flex flex-col justify-center">
+              <p className="text-neutral-700 mb-4">Our team is a patchwork of passports and personalities: from Lebanon to Arkansas, from Cologne canals to Cambridge cows.</p>
+
+              <p className="text-neutral-700 mb-6 font-semibold">We created a simple way to organize and share what matters most.</p>
+              
+              <p className="text-neutral-700 mb-4">We are migrants, multilinguals, and multi-talented misfits who believe that communication should build bridges, not walls.</p>
+
+              <p className="text-neutral-700 mb-6 font-semibold">Being Clear. Remaining Calm. Staying Connected.</p>
+
+              <p className="text-neutral-700 mb-4">We’re not just building an app; we’re creating online safe spaces where conversations stay healthy, people stay connected, and potential is unlocked.</p> 
+                           
+              
+              <p className="text-neutral-700 mb-6 font-semibold">You deserve a simple way to organise and share what matters most.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works Section */}
+      <section id="howitworks" className="w-full bg-white text-gray-900">
+  <div className="mx-auto max-w-7xl px-6 py-16">
+          {/* Header */}
+          <motion.h2
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="text-3xl md:text-4xl font-semibold tracking-tight"
+          >
+            How it works
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.1, duration: 0.4 }}
+            className="mt-2 text-base md:text-lg text-gray-600"
+          >
+            
+          </motion.p>
+
+          {/* 3-step grid */}
+          <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
+            <StepCard
+              icon={<PlayCircle className="h-6 w-6" aria-hidden="true" />}
+              title="Contact"
+              text="Send a WhatsApp message or download the app for free to get started."
+            />
+            <StepCard
+              icon={<Plug className="h-6 w-6" aria-hidden="true" />}
+              title="Connect"
+              text="Link the calendar you already use and your WhatsApp number (optionally add another person)."
+            />
+            <StepCard
+              icon={<Share2 className="h-6 w-6" aria-hidden="true" />}
+              title="Communicate"
+              text={
+                <>
+                  Export <code className="font-mono text-sm">.ics</code> and share events via WhatsApp, Email, AirDrop, Messages, Telegram, Signal, Messenger, and more.
+                </>
+              }
+            />
+          </div>
+
+          <div className="mt-8 flex flex-col sm:flex-row flex-wrap items-center gap-3 w-full">
+            <a
+              href="https://api.whatsapp.com/send/?phone=%2B31613070691&text=I%27m+saying+hello+to+iMediate%27s+Automagic%21&type=phone_number&app_absent=0"
+              target="_blank" rel="noopener noreferrer"
+              className="w-full sm:w-auto rounded-2xl bg-emerald-600 px-5 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-emerald-700 hover:shadow-md flex items-center gap-2 justify-center"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20" fill="currentColor" className="text-white"><path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.832 4.584 2.236 6.37L4 29l7.824-2.18C13.5 27.606 14.734 28 16 28c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 22c-1.13 0-2.244-.188-3.293-.558l-.235-.08-4.646 1.294 1.294-4.646-.08-.235C6.188 17.244 6 16.13 6 15c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10zm5.29-7.709c-.293-.146-1.73-.855-1.997-.951-.267-.098-.461-.146-.656.146-.195.293-.752.951-.922 1.146-.17.195-.341.219-.634.073-.293-.146-1.236-.455-2.357-1.451-.87-.776-1.457-1.732-1.63-2.025-.17-.293-.018-.45.128-.595.132-.132.293-.341.439-.512.146-.17.195-.293.293-.488.098-.195.049-.366-.024-.512-.073-.146-.656-1.586-.899-2.172-.237-.57-.478-.492-.656-.5-.17-.007-.366-.009-.561-.009-.195 0-.512.073-.78.366-.267.293-1.02.996-1.02 2.427 0 1.43 1.04 2.812 1.186 3.007.146.195 2.048 3.13 5.07 4.267.709.244 1.262.39 1.694.499.712.181 1.36.156 1.872.095.571-.067 1.73-.707 1.976-1.39.244-.683.244-1.268.171-1.39-.073-.122-.268-.195-.561-.341z"/></svg>
+              Say hello to calendar.iM
+            </a>
+            <a
+              href="https://apps.apple.com/app/imediate/id6744072106"
+              target="_blank"
+              rel="noreferrer"
+              className="w-full sm:w-auto inline-flex items-center gap-2 rounded-2xl border border-neutral-200 bg-white px-4 py-3 text-sm font-medium shadow-sm transition hover:shadow-md justify-center"
+              aria-label="Download on the App Store"
+            >
+              <Apple className="h-5 w-5" />
+              <span>App Store</span>
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.imediate"
+              target="_blank"
+              rel="noreferrer"
+              className="w-full sm:w-auto inline-flex items-center gap-2 rounded-2xl border border-neutral-200 bg-white px-4 py-3 text-sm font-medium shadow-sm transition hover:shadow-md justify-center"
+              aria-label="Get it on Google Play"
+            >
+              <PlayCircle className="h-5 w-5" />
+              <span>Google Play</span>
+            </a>
+          </div>
+
+          {/* New container */}
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.4 }}
+            className="mt-10 rounded-2xl border border-gray-200 bg-gray-50 p-6"
+          >
+            <div className="flex items-start gap-4">
+              <div className="shrink-0 rounded-xl bg-white p-3 shadow-sm">
+                <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-100 to-sky-100">
+                  <MessageSquareText className="h-6 w-6" aria-hidden="true" />
+                </div>
+              </div>
+              <div className="space-y-3">
+                <h3 className="text-xl font-semibold">iM‑ing is back!</h3>
+                <p className="text-gray-700">
+                  Text like normal (photos/videos too) through the iM network. When you send <span className="font-semibold">“who, what, when”</span>, we draft the event right in chat. Approve it to add to your calendar. You can also use iMediate as a simple notepad for reminders.
+                </p>
+              </div>
+            </div>
+
+            {/* Highlight strip */}
+            <div className="mt-6 flex items-start gap-3 rounded-xl border border-amber-200 bg-amber-50 p-4">
+              <Shield className="mt-0.5 h-5 w-5" aria-hidden="true" />
+              <p className="text-sm leading-relaxed text-amber-900">
+                All iMs are sent through our <span className="font-semibold">patent‑pending Shield.iM™</span> technology. Keeping your online space focused on our mission: empowering people and simplifying scheduling by remaining clear, calm and connected.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Examples */}
+          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+            <motion.div
+              initial={{ opacity: 0, y: 8 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4 }}
+              className="rounded-2xl border border-gray-200 p-6 shadow-sm"
+            >
+              {/* Toggle Tabs */}
+              <div className="mb-4 flex gap-2">
+                  <button
+                    className={`flex-1 px-3 py-1 rounded-full text-sm font-semibold transition ${!showCantSay ? 'bg-emerald-100 text-emerald-700' : 'bg-gray-100 text-gray-500'}`}
+                    onClick={() => setShowCantSay(false)}
+                  >
+                    Examples to make Automagic! 
+                  </button>
+                  <button
+                    className={`flex-1 px-3 py-1 rounded-full text-sm font-semibold transition ${showCantSay ? 'bg-red-600 text-white' : 'bg-gray-100 text-gray-500'}`}
+                    onClick={() => setShowCantSay(true)}
+                  >
+                    Shield.iM will help avoid
+                  </button>
+              </div>
+              {/* Tab Content */}
+              {!showCantSay ? (
+                <>
+                  <ul className="space-y-3 text-gray-700">
+                    <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5" /> <span>Hi Taylor, Luna has dentist Fri 5:30–16:15 at Tandartspraktijk in Jordaan. Can you take her? Dentist office number: +31 6 9876 5432.</span></li>
+                    <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5" /> <span>Wana go to the zoo on Thurday? Meeting 09:30 until 15:30 at the Artis, you in? I'd say bring lunch and a sun hat.</span></li>
+                    <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5" /> <span>You fancy meeting this Tuesday eveing? There's an event at OBS De Regenboog. Fancy going?</span></li>
+                  </ul>
+                </>
+              ) : (
+                <>
+                  <ul className="space-y-3 text-gray-500">
+                    <li className="flex items-start gap-2"><XCircle className="h-5 w-5 text-red-300" /> <span>“You never listen to me.”</span></li>
+                    <li className="flex items-start gap-2"><XCircle className="h-5 w-5 text-red-300" /> <span>“You’re overreacting.”</span></li>
+                    <li className="flex items-start gap-2"><XCircle className="h-5 w-5 text-red-300" /> <span>“This is all your fault.”</span></li>
+                    <li className="flex items-start gap-2"><XCircle className="h-5 w-5 text-red-300" /> <span>“If you loved me, you’d do what I ask.”</span></li>
+                    <li className="flex items-start gap-2"><XCircle className="h-5 w-5 text-red-300" /> <span>“You always make everything about you.”</span></li>
+                    <li className="flex items-start gap-2"><XCircle className="h-5 w-5 text-red-300" /> <span>“After all I’ve done for you…”</span></li>
+                  </ul>
+                </>
+              )}
+            </motion.div>
+
+            {/* Why people love it */}
+            <motion.div
+              initial={{ opacity: 0, y: 8 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4 }}
+              className="rounded-2xl border border-gray-200 p-6 shadow-sm"
+            >
+              <div className="mb-4 flex items-center gap-2">
+                <CalendarPlus className="h-5 w-5" aria-hidden="true" />
+                <h3 className="text-lg font-semibold">Why people love it</h3>
+              </div>
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex items-start gap-2"><PlusCircle className="h-5 w-5" /> <span>No new workflow! Stay in WhatsApp.</span></li>
+                <li className="flex items-start gap-2"><PlusCircle className="h-5 w-5" /> <span>One shared source of truth in your calendar.</span></li>
+                <li className="flex items-start gap-2"><PlusCircle className="h-5 w-5" /> <span>Calm and organized, connected correctly.</span></li>
+                <li className="flex items-start gap-2"><PlusCircle className="h-5 w-5" /> <span>Turns WhatsApp messages into complete calendar events.</span></li>
+                <li className="flex items-start gap-2"><PlusCircle className="h-5 w-5" /> <span>Private by default; your data stays on-device, always.</span></li>
+                <li className="flex items-start gap-2"><PlusCircle className="h-5 w-5" /> <span>Always secure, encrypted and anonomised.</span></li>
+              </ul>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+          {/* Pricing Section */}
+      <section id="pricing" className="mx-auto max-w-7xl px-6 py-16">
+        <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-semibold tracking-tight">Pricing & Plans</h2>
+          <p className="mt-3 text-neutral-700">
+            Simple, transparent pricing for everyone. Choose the plan that fits your needs and unlock all features.
+          </p>
+        </motion.div>
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <ValueCard
+            Icon={Shield}
+            title="Free Forever"
+            text="All core features. No credit card required. Perfect for individuals and families starting out."
+          />
+          <ValueCard
+            Icon={PlusCircle}
+            title="Pro Plan"
+            text="Advanced features for power users and professionals. Priority support and more. Coming soon!"
+          />
+          <ValueCard
+            Icon={Users}
+            title="Teams & Groups"
+            text="Collaborate with larger groups, manage permissions, and get custom onboarding. Contact us for details."
+          />
+        </div>
+        <div className="mt-10 grid gap-6 lg:grid-cols-3">
+          <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+            <h3 className="text-lg font-semibold mb-2">What's included (Free):</h3>
+            <ul className="list-disc list-inside text-gray-700 space-y-1 text-sm">
+              <li>Unlimited events & reminders</li>
+              <li>WhatsApp, Email, and Calendar integration</li>
+              <li>Secure, private storage</li>
+              <li>All platforms: iOS, Android, Web</li>
+              <li>Basic support</li>
+            </ul>
+          </div>
+          <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+            <h3 className="text-lg font-semibold mb-2">Pro Features (Coming soon):</h3>
+            <ul className="list-disc list-inside text-gray-700 space-y-1 text-sm">
+              <li>Advanced automations</li>
+              <li>Custom reminders & templates</li>
+              <li>Priority support</li>
+              <li>Early access to new features</li>
+            </ul>
+          </div>
+          <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+            <h3 className="text-lg font-semibold mb-2">Teams & Groups:</h3>
+            <ul className="list-disc list-inside text-gray-700 space-y-1 text-sm">
+              <li>Group management tools</li>
+              <li>Shared calendars & permissions</li>
+              <li>Custom onboarding & support</li>
+              <li>Contact us for pricing</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Careers Section */}
+      <section id="contact" className="mx-auto max-w-7xl px-6 py-16">
+        <div className="flex flex-col md:flex-row gap-8">
+          <div className="flex-1 rounded-3xl bg-white p-8 shadow-sm">
+            <h4 className="text-2xl font-semibold tracking-tight mb-4 text-center">Careers at Calendar.iM</h4>
+            <p className="text-neutral-700 mb-4 text-center">Our Mission: Empowering people, simplifying scheduling.</p>
+            <p className="text-neutral-700 mb-4 text-center">With us, you’ll get hands-on experience, real responsibility, and the chance to help shape the future of how people communicate.</p>
+            <p className="text-neutral-700 mb-4 text-center">Think you can bring some fresh energy to the team?</p>
+            <div className="flex justify-center mb-8">
+              <a
+                href="mailto:info@imediate.foundation?subject=I%E2%80%99d%20like%20to%20help"
+                className="inline-flex items-center gap-2 rounded-2xl bg-emerald-600 px-6 py-3 text-base font-medium text-white shadow-sm transition hover:bg-emerald-700 hover:shadow-md"
+              >
+                <span role="img" aria-label="envelope">📧</span> Drop us a line
+              </a>
+            </div>
+          </div>
+          {/* Duplicated container */}
+          <div className="flex-1 rounded-3xl bg-white p-8 shadow-sm">
+            <h4 className="text-2xl font-semibold tracking-tight mb-4 text-center">Contact Us</h4>
+            <div className="mb-4 text-center">
+              <p className="text-neutral-700 text-lg ">
+                <a href="tel:+31622267448" className="hover:text-emerald-600 underline">+31 6 222 67 448</a>
+              </p>
+              <p className="text-neutral-700 text-lg ">
+                dm on Instagram - <a href="https://www.instagram.com/imediate.im" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 underline">@iMediate,iM</a>
+              </p>
+            </div>
+              <div className="mb-4 flex justify-center">
+                <iframe
+                  title="Herengracht 449A, 1017 BR Amsterdam"
+                  src="https://www.google.com/maps?q=Herengracht+449A,+1017+BR+Amsterdam&output=embed"
+                  className="w-full rounded-xl border-0"
+                  height="160"
+                  allowFullScreen
+                ></iframe>
+              </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Footer */}
       <section id="download" className="mx-auto mt-16 max-w-7xl px-6 pb-24">
         <div className="rounded-3xl bg-gradient-to-br from-emerald-100 to-sky-100 p-8 text-center md:p-12">
@@ -241,8 +620,11 @@ export default function App() {
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-2xl border border-neutral-200 bg-white px-5 py-3 text-sm font-medium shadow-sm transition hover:shadow-md"
             >
-              <PlayCircle className="h-5 w-5" /> Google Play
+              <PlayCircle className="h-5 w-5" /> Free for everyone
             </a>
+          </div>
+          <div className="mt-6">
+            <span className="block text-lg font-semibold">Download today for a better tomorrow.</span>
           </div>
         </div>
       </section>
@@ -324,7 +706,7 @@ function ValueCard({ Icon, title, text }: { Icon: any; title: string; text: stri
 function FeatureList() {
   const items = [
   { icon: Users, title: "Shared scheduling", desc: "Plan together with a person who matters." },
-    { icon: Bell, title: "Reminders", desc: "Gentle nudges that help—never overwhelm." },
+  { icon: Bell, title: "Reminders", desc: "Gentle nudges that help, at the right moment for you." },
     { icon: FileText, title: "Notes", desc: "Keep details, lists, and agreements in one place." },
     { icon: Lock, title: "Secure storage", desc: "Your information stays private and in your control." },
   ];
